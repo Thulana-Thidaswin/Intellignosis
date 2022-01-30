@@ -1,7 +1,56 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: auto;
   max-width: 38rem;
-  padding: 2rem;
+  background-color: #c4c4c4;
+}
+
+.sidePanel{
+  width: 20%;
+  float: left;
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  height: 100%;
+}
+
+.spbtn{
+  width: 100%;
+  /* margin-bottom: 30px; */
+  background-color: #d1d1d1;
+  height: 50px;
+  font-size: large;
+  transition-duration: 0.1s;
+  border: none;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.spbtn:hover{
+  background-color: #85858C;
+}
+
+.spbtn:active{
+  background-color: #616D7E;
+  border-right: 7px solid black;
+}
+
+.spbtn:visited{
+  background-color: gray;
+  border-right: 7px solid black;
+}
+
+.AboutText{
+  position: relative;
+  top: 50%;
+}
+
+.mainPanel{
+  position: absolute;
+  right: 0px;
+  float: right;
+  width: 80%;
+  background-color: #d1d1d1;
+  height: 100%;
+  text-align: center;
 }

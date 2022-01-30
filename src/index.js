@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
+const isMac = process.platform === 'darwin'
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -12,8 +13,86 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: "D:/Screenshots/ciruclarcroppedlogo_1WL_icon.ico"
   });
 
+  const template = [
+    // { role: 'appMenu' }
+    // { role: 'fileMenu' }
+    {
+      label: 'File',
+      submenu: [
+        { label: 'Open Folder', 
+        click: function()
+          {
+            console.log("Open folder")          
+          } 
+        },
+        { label: 'Open File',
+          click: function(){
+            console.log("Open file")
+          } },
+        { label: 'Open Recent', 
+          submenu:[
+            {label: 'Recentanalysis.itl',
+              click: function(){
+                console.log("Open recent file")
+              }}
+          ] },
+      ]
+    },
+    // { role: 'viewMenu' }
+    {
+      label: 'View',
+      submenu: [
+        { type: 'separator' },
+        { role: 'resetZoom' },
+        { role: 'zoomIn' },
+        { role: 'zoomOut' },
+        { type: 'separator' },
+        { role: 'togglefullscreen' }
+      ]
+    },
+    // { role: 'saveMenu' }
+    {
+      label: 'Save',
+      submenu: [
+        { label: 'Save as...',
+          click: function(){
+            console.log("Save as")
+          }},
+        { label: 'Save', 
+          click: function(){
+            console.log("Save")
+          }}
+      ]
+    },
+    // { role: 'windowMenu' }
+    {
+      label: 'Window',
+      submenu: [
+        { role: 'minimize' },
+        { type: 'separator'},        
+        { role: 'close' },
+        { role: 'reload' }
+        ]
+    },
+    {
+      role: 'help',
+      submenu: [
+        {
+          label: 'Learn More',
+          click: async () => {
+            const { shell } = require('electron')
+            await shell.openExternal('#AboutUsScreen')
+          }
+        }
+      ]
+    }
+  ]
+  
+  const menu = Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 

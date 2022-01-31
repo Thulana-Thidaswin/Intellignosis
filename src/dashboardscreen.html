@@ -8,6 +8,7 @@
     <meta charset="UTF-8" />
     <title>Intellignosis</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="dashboardscreencss.css"/>
     <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -24,21 +25,23 @@
         Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
     </div>
     <div class="mainPanel">
-      <p>This is the dashboard screen. Please go through the comments in the html code</p>
-      <!-- Please go through the entire code and make sure you understand everything -->
-      <!-- Include the main page content within this div tag.-->
-      <!-- I have created a css tag for mainPanel in index.css. -->
-      <!-- You don't have to create a separate html or css file for your screens -->
-      <!-- You can make them right here in the index.html and index.css -->
-      <!-- But please remember to RENAME index.html and index.css into your own screen names and keep the naming consistent-->
-      <!-- Example: historyscreen.html, historyscreen.css, historyscreen.js -->
-      <!-- But for js, create a separate file. DO NOT USE index.js -->
-      <!-- Put all your things into div containers. It will be easy to organize them if you do so. -->
-      <!-- .................. -->
-      <!-- GIT STUFF -->
-      <!-- You have cloned this file into your local repo
-      Before you commit or push this make sure you have created a new branch with the relevant screen name
-      Don't merge this branch into the main branch -->
+      <h1>Overview</h1>
+      <div class="dbbtngrid">
+        <table>
+          <tr>
+            <button class="dbbtns">Analyze EEG report</button>
+            <button class="dbbtns">See history</button><br>
+          </tr>
+          <tr>
+            <button class="dbbtns">Account</button>
+            <button class="dbbtns">Settings</button><br>
+          </tr>
+          <tr>
+            <button class="dbbtns">Find consultant</button>
+            <button class="dbbtns">More information</button>
+          </tr>  
+        </table>  
+      </div>
     </div>
   </body>
 </html>

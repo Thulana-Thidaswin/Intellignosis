@@ -13,11 +13,10 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: "D:/Screenshots/ciruclarcroppedlogo_1WL_icon.ico"
+    icon: "main-images/ciruclarcroppedlogo_1WL_icon.ico"
   });
 
   const template = [
-    // { role: 'appMenu' }
     // { role: 'fileMenu' }
     {
       label: 'File',
@@ -77,6 +76,7 @@ const createWindow = () => {
         { role: 'reload' }
         ]
     },
+    // { role: 'helpMenu' }
     {
       role: 'help',
       submenu: [
@@ -121,6 +121,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.

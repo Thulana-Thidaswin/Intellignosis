@@ -1,4 +1,7 @@
 <!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
+<!-- TODO: Glass texture to UI -->
+<!-- TODO: Visited style for side panel buttons -->
+<!-- TODO: Also discuss about the code repetition issue -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,20 +13,24 @@
   <body>
     <div class="sidePanel">
       <!-- Don't make any changes to this panel  -->
-      <img src="D:\Screenshots\logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
-      <button type="button" class="spbtn"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
-      <button class="spbtn"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
-      <button class="spbtn"><i class="fas fa-history"></i>&nbsp;&nbsp;History</button><br>
-      <button class="spbtn"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+      <img src="main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+      <div class="spbtnpanel">
+        <button type="button" class="spbtn" onclick="window.location.href='#dashboardscreen'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='#analyzescreen'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='#historyscreen'"><i class="fas fa-history"></i>&nbsp;&nbsp;History</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='#settingsscreen'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+      </div>  
       <span class="AboutText"><p>Intellignosis® version 1.0.0<br>
         Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
     </div>
     <div class="mainPanel">
+      <p>This is the main panel. Please go through the comments in the html code</p>
+      <!-- Please go through the entire code and make sure you understand everything -->
       <!-- Include the main page content within this div tag.-->
       <!-- I have created a css tag for mainPanel in index.css. -->
       <!-- You don't have to create a separate html or css file for your screens -->
       <!-- You can make them right here in the index.html and index.css -->
-      <!-- But please remember to RENAME index.html and index.css into your own screen names -->
+      <!-- But please remember to RENAME index.html and index.css into your own screen names and keep the naming consistent-->
       <!-- Example: historyscreen.html, historyscreen.css, historyscreen.js -->
       <!-- But for js, create a separate file. DO NOT USE index.js -->
       <!-- Put all your things into div containers. It will be easy to organize them if you do so. -->

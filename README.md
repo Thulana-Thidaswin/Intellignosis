@@ -1,2 +1,2 @@
 # Intellignosis
-Our work on our SDGP Project
+Our work on our SDGP Project uwu

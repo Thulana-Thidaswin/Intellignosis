@@ -44,7 +44,6 @@ body {
   top: 70%;
 }
 
-/* This is the css tag for the main panel */
 .mainPanel{
   position: absolute;
   right: 0px;
@@ -53,5 +52,5 @@ body {
   background-color: #d1d1d1;
   height: 100%;
   text-align: center;
-  /* Add your css styles for the main panel here */
+  border-left: 2px solid #52595D;
 }

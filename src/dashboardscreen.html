@@ -1,7 +1,6 @@
-<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
-<!-- TODO: Glass texture to UI -->
-<!-- TODO: Visited style for side panel buttons -->
-<!-- TODO: Also discuss about the code repetition issue -->
+<!-- TODO: Add icons to the main panel buttons -->
+<!-- TODO: Increase height of buttons -->
+<!-- TODO: Link them properly -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,16 +28,16 @@
       <div class="dbbtngrid">
         <table>
           <tr>
-            <button class="dbbtns">Analyze EEG report</button>
-            <button class="dbbtns">See history</button><br>
+            <button class="dbbtns" onclick="window.location.href='#analysisscreen'">Analyze EEG report</button>
+            <button class="dbbtns" onclick="window.location.href='#historyscreen'">See history</button><br>
           </tr>
           <tr>
-            <button class="dbbtns">Account</button>
-            <button class="dbbtns">Settings</button><br>
+            <button class="dbbtns" onclick="window.location.href='#accountscreen'">Account</button>
+            <button class="dbbtns" onclick="window.location.href='#settingsscreen'">Settings</button><br>
           </tr>
           <tr>
-            <button class="dbbtns">Find consultant</button>
-            <button class="dbbtns">More information</button>
+            <button class="dbbtns" onclick="window.location.href='#findconsultantscreen'">Find consultant</button>
+            <button class="dbbtns" onclick="window.location.href='#moreinfoscreen'">More information</button>
           </tr>  
         </table>  
       </div>

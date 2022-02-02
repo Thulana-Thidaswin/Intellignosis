@@ -12,6 +12,8 @@ body {
     position: absolute;
     left: 15px;
     top: 15px;
+	padding-bottom: 60px;
+		
 }
 
 .sidePanel{

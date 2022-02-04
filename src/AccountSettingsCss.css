@@ -1,0 +1,12 @@
+.Profile{
+    border: 1px solid;
+    width: 30%;
+    position: absolute;
+    left:30%;
+    top:20%;
+}
+#profileImage{
+    width: auto;
+    height: 230px;
+    margin: 20px 0px 20px 0px;
+} 

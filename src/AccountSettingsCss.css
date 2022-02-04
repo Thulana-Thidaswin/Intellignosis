@@ -1,12 +1,14 @@
-.Profile{
+.Profile {
     border: 1px solid;
     width: 30%;
     position: absolute;
-    left:30%;
-    top:20%;
+    left: 30%;
+    top: 10%;
+    height:auto;
 }
-#profileImage{
-    width: auto;
-    height: 230px;
+
+#profileImage {
+    width: 60%;
+    height: auto;
     margin: 20px 0px 20px 0px;
-} 
+}

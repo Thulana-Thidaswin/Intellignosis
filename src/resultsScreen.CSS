@@ -1,0 +1,67 @@
+/* This is the css tag for the main panel */
+.mainPanel{
+    position: absolute;
+    right: 0px;
+    float: right;
+    width: 80%;
+    background-color: #d1d1d1;
+    height: 100%;
+    text-align: left;
+    /* Add your css styles for the main panel here */
+}
+
+.resultsSheet {
+    background-color: white;
+    padding-left: 20px;
+    width: 92%;
+    height: 85%;
+    overflow-y: scroll;
+    margin-top: 3%;
+}
+
+.mainHeading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.patientDetails{
+    padding-bottom: 15px;
+}
+
+.diagnosusection{
+    padding-bottom: 30px;
+}
+
+.additionalNotes{
+    padding-bottom: 30px;
+}
+
+.bdinfo{
+    padding-top: 3px;
+}
+
+.coolNote{
+    padding-top: 7px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.buttonDiv{
+    float:right;
+    padding-right: 50px;
+}
+
+.botButton{
+    background-color: #806c6c;
+    font-size: 20px;
+    text-decoration: none;
+    border-style: none;
+    color: white;
+    padding: 10px 50px 10px 50px;
+    margin: 15px 7px 15px 30px;
+}
+
+.botButton:hover {
+    background-color: #806c6ccc;
+}
+

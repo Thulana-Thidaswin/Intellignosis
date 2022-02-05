@@ -5,15 +5,6 @@ body {
   background-color: #c4c4c4;
 }
 
-#gobacklink{
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-
 .sidePanel{
   width: 20%;
   float: left;
@@ -53,13 +44,4 @@ body {
   top: 70%;
 }
 
-.mainPanel{
-  position: absolute;
-  right: 0px;
-  float: right;
-  width: 80%;
-  background-color: #d1d1d1;
-  height: 100%;
-  text-align: center;
-  border-left: 2px solid #52595D;
-}
+

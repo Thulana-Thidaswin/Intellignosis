@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href ="resultsScreen.CSS" />
     <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
+    <script src="resultsScreen.js"></script>
   </head>
 
   <body>
@@ -32,6 +33,7 @@
     </div>
 
     <div class="mainPanel">
+
         <a href="ChangeScreenHTML.html" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
 
         <div class = "resultsSheet">
@@ -40,34 +42,39 @@
                 Automated evaluation
             </h2>
             
-            <section class="patientDetails" >
+            <div id = "details" class="patientDetails" >
                 <p>
                     Date          : 28 December 2021<br>
                     Patient Name  : Thulana Thidaswin<br>
                     Patient Age   : 20 years
                 </p>
-            </section>
+            </div>
+
+            
             
 
             <section class="diagnosusection">
                 <h3>
                     Diagnosus
                 </h3>
+            </section>
 
+            <div id = "diagnosus">
                 <p>
                     The patient is suffering from <b>Moderate</b> Depression (BDI-II-20-28).
                 </p>
-            </section>
+            </div>
+
 
             <section class="additionalNotes">
                 <h3>
                     Additional Notes
                 </h3>
 
-                <p>
+                <p id="seekTherapy">
                     A psychiatrist consultation is <b>highly</b> recommended.
                 </p>
-                <p>
+                <p id="symptoms">
                     The patient might show symptoms of insomnia, anxiety and possibly signs of self-harm.
                 </p>
             </section>
@@ -95,7 +102,14 @@
         </div>
         <section class="buttonDiv">
             <button class="botButton">Print</button>
-            <button class="botButton">Export to <b>v</b></button>
+            <!--get the fa icon to act as a link too
+            auto scroll down when drop down menu is clicked-->
+            <button onclick="dropDownMenu()" class="botButton dropbtn">Export to <i class="fas fa-chevron-down"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">PDF</a>
+                <a href="#about">Word Doc</a>
+                <a href="#contact">Email</a>
+              </div>
         </section>
       
       <!-- GIT STUFF -->
@@ -109,5 +123,9 @@
     </div>>
 
   </body>
+
+  <script>changeName();
+  changeResult();
+  </script>
 
 </html>

@@ -1,0 +1,18 @@
+.sett{
+    background-color: #c4c4c4;
+    font-size: 25px;
+    padding: 10px;
+    margin: 20px 100px 2px 80px;
+    border-radius: 20px;
+    border: none;
+    width: 80%;
+    transition-duration: 0.1s;
+}
+
+.sett:hover{
+    background-color: #85858C;
+  }
+
+.settb{
+    margin-top: 35px;
+}

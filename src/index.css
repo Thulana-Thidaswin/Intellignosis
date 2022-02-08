@@ -3,6 +3,7 @@ body {
   margin: auto;
   max-width: 38rem;
   background-color: #c4c4c4;
+  text-align: center;
 }
 
 .sidePanel{
@@ -44,14 +45,4 @@ body {
   top: 70%;
 }
 
-/* This is the css tag for the main panel */
-.mainPanel{
-  position: absolute;
-  right: 0px;
-  float: right;
-  width: 80%;
-  background-color: #d1d1d1;
-  height: 100%;
-  text-align: center;
-  /* Add your css styles for the main panel here */
-}
+

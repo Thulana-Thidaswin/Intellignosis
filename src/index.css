@@ -16,6 +16,7 @@ body {
   border-left: 2px solid #52595D;
 }
 
+
 .sidePanel{
   width: 20%;
   float: left;
@@ -23,6 +24,7 @@ body {
   left: 0px;
   text-align: center;
   height: 100%;
+  background-image: url('../src/main-images/grey-g9dec26a6e_1280.png');
 }
 
 .spbtn{
@@ -54,5 +56,6 @@ body {
   position: relative;
   top: 70%;
 }
+
 
 

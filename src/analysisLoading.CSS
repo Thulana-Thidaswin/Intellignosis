@@ -22,7 +22,7 @@
     width: calc(var(--width, 0) * 1%);
     min-width: 2rem;
     max-width: calc(100% - 1em);
-    background-color: #069;
+    background-color: #806c6c;
     border-radius: 1em;
     padding: 1em;
 }
@@ -30,5 +30,9 @@
 .loadingText {
     text-align: left;
     margin-top: 50px;
+}
+
+#check1, #check2, #check3 {
+    visibility: hidden;
 }
 

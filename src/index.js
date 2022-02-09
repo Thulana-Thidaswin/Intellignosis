@@ -94,7 +94,7 @@ const createWindow = () => {
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'SignInScreen.html'));
+  mainWindow.loadFile(path.join(__dirname, 'dashboardscreen.html'));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

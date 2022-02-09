@@ -50,9 +50,8 @@ body {
   right: 0px;
   float: right;
   width: 80%;
-  background-color: #d1d1d1;
   height: 100%;
+  background-image: url("main-images/grey-g9dec26a6e_1280.png");
   text-align: center;
-  /* Adding a border here */
   border-left: 2px solid #52595D;
 }

@@ -4,8 +4,7 @@ h1{
 }
 
 .dbbtns{
-    background-color: black;
-    color: white;
+    background-color: #c4c4c4;
     font-size: 25px;
     padding: 30px;
     margin: 50px 80px 80px 80px;
@@ -13,15 +12,8 @@ h1{
     border: none;
     width: 30%;
     transition-duration: 0.1s;
-    cursor: pointer;
-    transition-duration: 0.4s;
 }
 
 .dbbtns:hover{
-    background-color: white;
-    color: black;
-}
-
-.dbbtns:active{
-    background-color: gray;
-}
+    background-color: #85858C;
+  }

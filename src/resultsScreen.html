@@ -1,0 +1,131 @@
+<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
+<!-- TODO: Glass texture to UI -->
+<!-- TODO: Visited style for side panel buttons -->
+<!-- TODO: Also discuss about the code repetition issue -->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intellignosis</title>
+    <link rel="icon" href="main-images/ciruclarcroppedlogo_1WL_icon.ico">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href ="resultsScreen.CSS" />
+    <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
+    <script src="resultsScreen.js"></script>
+  </head>
+
+  <body>
+
+    <div class="sidePanel">
+      <!-- Don't make any changes to this panel  -->
+      <img src="main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+      <div class="spbtnpanel">
+        <button type="button" class="spbtn" onclick="window.location.href='#dashboardscreen'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='#analyzescreen'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='#historyscreen'"><i class="fas fa-history"></i>&nbsp;&nbsp;History</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='#settingsscreen'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+      </div> 
+
+      <span class="AboutText"><p>Intellignosis® version 1.0.0<br>
+        Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
+
+    </div>
+
+    <div class="mainPanel">
+
+        <a href="ChangeScreenHTML.html" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
+
+        <div class = "resultsSheet">
+            <h2 class="mainHeading">
+                Major Depressive Disorder Intellignosis Report<br>
+                Automated evaluation
+            </h2>
+            
+            <div id = "details" class="patientDetails" >
+                <p>
+                    Date          : 28 December 2021<br>
+                    Patient Name  : Thulana Thidaswin<br>
+                    Patient Age   : 20 years
+                </p>
+            </div>
+
+            
+            
+
+            <section class="diagnosusection">
+                <h3>
+                    Diagnosus
+                </h3>
+            </section>
+
+            <div id = "diagnosus">
+                <p>
+                    The patient is suffering from <b>Moderate</b> Depression (BDI-II-20-28).
+                </p>
+            </div>
+
+
+            <section class="additionalNotes">
+                <h3>
+                    Additional Notes
+                </h3>
+
+                <p id="seekTherapy">
+                    A psychiatrist consultation is <b>highly</b> recommended.
+                </p>
+                <p id="symptoms">
+                    The patient might show symptoms of insomnia, anxiety and possibly signs of self-harm.
+                </p>
+            </section>
+
+            <section class="bdinfo">
+                <p>
+                    <b>Beck Depression Index</b><br>
+                    <br>
+                    0 - 13    : Minimal<br>
+                    14 - 19  : Mild<br>
+                    20 - 28  : Moderate<br>
+                    29 - 63  : Severe
+                </p>
+            <section>
+
+            <section class="coolNote">
+                <p>
+                    Please keep in mind that this diagnosis is not a replacement for a clinician’s diagnosis and it is not advised to solely rely on this <br>
+                    application for your mental health. Visit a consellor or a psychiatrist to obtain proper treatment.
+                </p>
+            </section>
+
+            
+
+        </div>
+        <section class="buttonDiv">
+            <button class="botButton">Print</button>
+            <!--get the fa icon to act as a link too
+            auto scroll down when drop down menu is clicked-->
+            <button onclick="dropDownMenu()" class="botButton dropbtn">Export to <i class="fas fa-chevron-down"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">PDF</a>
+                <a href="#about">Word Doc</a>
+                <a href="#contact">Email</a>
+              </div>
+        </section>
+      
+      <!-- GIT STUFF -->
+      <!-- You have cloned this file into your local repo
+      Before you commit or push this make sure you have created a new branch with the relevant screen name
+      Don't merge this branch into the main branch -->
+    </div>
+
+    <div>
+        
+    </div>>
+
+  </body>
+
+  <script>changeName();
+  changeResult();
+  </script>
+
+</html>

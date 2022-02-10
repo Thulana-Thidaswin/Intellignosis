@@ -3,9 +3,8 @@ body {
   margin: auto;
   max-width: 38rem;
   background-color: #c4c4c4;
+  text-align: center;
 }
-
-
 
 .sidePanel{
   width: 20%;
@@ -46,7 +45,6 @@ body {
   position: relative;
   top: 70%;
 }
-
 .mainPanel{
   position: absolute;
   right: 0px;

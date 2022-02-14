@@ -1,10 +1,14 @@
+<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
+<!-- TODO: Glass texture to UI -->
+<!-- TODO: Visited style for side panel buttons -->
+<!-- TODO: Also discuss about the code repetition issue -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title>Intellignosis</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="dashboardscreencss.css"/>
+    <link rel="stylesheet" href="../index.css"/>
+    <link rel="stylesheet" href="../css-files/AccountSettingsCSS.css"/>
     <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -21,23 +25,19 @@
         Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
     </div>
     <div class="mainPanel">
-      <h1>Overview</h1>
-      <div class="dbbtngrid">
-        <table>
-          <tr>
-            <button class="dbbtns" onclick="window.location.href='AnalyzeScreen.html'">Analyze EEG report</button>
-            <button class="dbbtns" onclick="window.location.href='#historyscreen'">See history</button><br>
-          </tr>
-          <tr>
-            <button class="dbbtns" onclick="window.location.href='AccountSettingsHTML.html'">Account</button>
-            <button class="dbbtns" onclick="window.location.href='SettingsScreenHTML.html'">Settings</button><br>
-          </tr>
-          <tr>
-            <button class="dbbtns" onclick="window.location.href='#findconsultantscreen'">Find consultant</button>
-            <button class="dbbtns" onclick="window.location.href='#moreinfoscreen'">More information</button>
-          </tr>  
-        </table>  
-      </div>
+	<a href="#Analysisscreen" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
+  <div class="Profile">
+    <img src="main-images/Profile-image-resized.png" alt="Pic" id="profileImage">
+    <h1>Name Surname</h1>
+    <p class="title">Email address</p>
+    <p>Age</p>
+    <p>Occupation</p>
+    <p>Address</p>
+    <p>Patient ID</p>
+    <a  href="ChangeScreenHTML.html">
+    <p><button>Edit Profile</button></p>
+    </a>
+  </div>
     </div>
   </body>
 </html>

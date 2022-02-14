@@ -4,8 +4,8 @@ h1{
 }
 
 .dbbtns{
-    background-color: black;
-    color: white;
+    background-color: #c4c4c4;
+    color: black;
     font-size: 25px;
     padding: 30px;
     margin: 50px 80px 80px 80px;
@@ -18,8 +18,8 @@ h1{
 }
 
 .dbbtns:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .dbbtns:active{

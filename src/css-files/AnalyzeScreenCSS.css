@@ -9,16 +9,20 @@
 
 .dropdown{
     text-align: left;
-    margin: 100px 20px 20px 50px;
-    font-size: 25px;
+    margin: 100px 20px 20px 100px;
+    font-size: 30px;
 }
 .addpatient{
-    background-color: #c4c4c4;
-    font-size: 20px;
+    background-color: brown;
+    color: white;
+    font-size: 15px;
     text-decoration: none;
-    border-style: none;
+    border:2px solid;
+    border-radius: 20px;
+    border-color: black;
+    width: 10%;
     padding: 10px 15px 10px 15px;
-    margin: 0px 7px 15px 30px;
+    margin: 0px 7px 15px 150px;
     cursor: pointer;
 }
 .addpdiv{
@@ -32,12 +36,15 @@
     font-size: 50px;
 }
 .analyzediv{
-    background-color: #806c6c;
+    background-color: brown;
     font-size: 20px;
     text-decoration: none;
-    border-style: none;
+    border:2px solid;
+    border-radius: 20px;
+    border-color: black;
+    width: 20%;
     color: white;
     padding: 10px 50px 10px 50px;
-    margin: 15px 7px 15px 30px;
+    margin: 15px 7px 15px 0px;
     cursor: pointer;
 }

@@ -1,5 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
+
 }
 
 .progressBar {
@@ -9,6 +10,7 @@
     background-color: #111;
     border-radius: 1.5em;
     color: white;
+
 }
 
 .progressBar::before {
@@ -25,14 +27,15 @@
     background-color: #806c6c;
     border-radius: 1em;
     padding: 1em;
+
 }
 
 .loadingText {
     text-align: left;
     margin-top: 50px;
+    
 }
 
 #check1, #check2, #check3 {
     visibility: hidden;
 }
-

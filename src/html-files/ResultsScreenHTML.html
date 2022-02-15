@@ -8,23 +8,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>Intellignosis</title>
-    <link rel="icon" href="main-images/ciruclarcroppedlogo_1WL_icon.ico">
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href ="ResultsScreenCSS.css" />
+    <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href ="../css-files/ResultsScreenCSS.css" />
     <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
-    <script src="ResultsScreenJS.js"></script>
+    <script src="../js-files/ResultsScreenJS.js"></script>
   </head>
 
   <body>
 
     <div class="sidePanel">
       <!-- Don't make any changes to this panel  -->
-      <img src="main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+      <img src="../main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
       <div class="spbtnpanel">
-        <button type="button" class="spbtn" onclick="window.location.href='#dashboardscreen'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
-        <button type="button" class="spbtn" onclick="window.location.href='#analyzescreen'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
-        <button type="button" class="spbtn" onclick="window.location.href='#historyscreen'"><i class="fas fa-history"></i>&nbsp;&nbsp;History</button><br>
-        <button type="button" class="spbtn" onclick="window.location.href='#settingsscreen'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='../html-files/DashboardScreenHTML.html'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='../html-files/AnalyzeScreenHTML.html'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='../html-files/SettingsScreenHTML.html'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
       </div> 
 
       <span class="AboutText"><p>Intellignosis® version 1.0.0<br>
@@ -33,8 +32,6 @@
     </div>
 
     <div class="mainPanel">
-
-        <a href="ChangeScreenHTML.html" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
 
         <div class = "resultsSheet">
             <h2 class="mainHeading">
@@ -53,13 +50,13 @@
             
             
 
-            <section class="diagnosusection">
+            <section class="diagnosissection">
                 <h3>
-                    Diagnosus
+                    Diagnosis
                 </h3>
             </section>
 
-            <div id = "diagnosus">
+            <div id = "diagnosis">
                 <p>
                     The patient is suffering from <b>Moderate</b> Depression (BDI-II-20-28).
                 </p>

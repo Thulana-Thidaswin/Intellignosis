@@ -5,24 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <title>Intellignosis</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="ChangeSettingsCSS.css" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../css-files/ChangeSettingsCSS.css" />
   <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="sidePanel">
     <!-- Don't make any changes to this panel  -->
-    <img src="main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+    <img src="../main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
     <div class="spbtnpanel">
-      <button type="button" class="spbtn" onclick="window.location.href='#dashboardscreen'"><i
-          class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='#analyzescreen'"><i
-          class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='#historyscreen'"><i
-          class="fas fa-history"></i>&nbsp;&nbsp;History</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='#settingsscreen'"><i
-          class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='../html-files/DashboardScreenHTML.html'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='../html-files/AnalyzeScreenHTML.html'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='../html-files/SettingsScreenHTML.html'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
     </div>
     <span class="AboutText">
       <p>Intellignosis® version 1.0.0<br>
@@ -30,14 +25,14 @@
     </span>
   </div>
   <div class="mainPanel">
-    <a href="ChangeScreenHTML.html" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
+    <a href="#ChangeScreen" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
 
     <p class="topSpace"></p>
     <div class="leftmerge">
       <p>Please enter new address : <input type="text" name="NewAdress" value="Enter Here"></p>
       <p class="space"></p>
       <p>Please re-enter the address : <input type="text" name="NewAdress2" value="Enter Here"> </p>
-      <a href="ChangeScreenHTML.html">
+      <a href="../html-files/ChangeScreenHTML.html">
         <p><button class="buttonRight">Submit</button></p>
       </a>
     </div>

@@ -1,0 +1,1 @@
+setTimeout(() => {  window.location.href="SignUpScreenHTML.html"; }, 3750);

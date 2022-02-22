@@ -3,26 +3,6 @@ h1{
 	text-align: center;
 }
 
-	::selection{
-		color: black;
-		background: #00adb5;
-	}
-
-    li,a,button {font-family: "Montserrat", sans-serif;
-             font-weight: 500;
-             font-size: 1rem;
-             color: #eeeeee;
-             background-color: inherit;}
-
-button {padding: 9px 25px;
-        background-color: rgba(0, 173, 181, 1);
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;}
-
-button:hover {background-color: rgba(0, 173, 181, 0.8);}
-
 #border_details{
 
 	border-radius: 25px;
@@ -39,7 +19,7 @@ button:hover {background-color: rgba(0, 173, 181, 0.8);}
     color: black;
     position: absolute;
     left: 15px;
-    top: 15px;
+    top: 15px;   
 }
 
 

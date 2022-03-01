@@ -15,7 +15,6 @@ const createWindow = () => {
     height: 600,
     icon: "main-images/ciruclarcroppedlogo_1WL_icon.ico"
   });
-  mainWindow.maximize();
 
   const template = [
     // { role: 'fileMenu' }

@@ -12,7 +12,7 @@
     color: black;
     font-size: 25px;
     padding: 10px;
-    margin: 20px 100px 2px 80px;
+    margin: 150px 100px 2px 80px;
     border-radius: 20px;
     border: none;
     width: 80%;
@@ -25,5 +25,5 @@
   }
 
 .settb{
-    margin-top: 35px;
+    margin-top: 15px;
 }

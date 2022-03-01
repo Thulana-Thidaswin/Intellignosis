@@ -3,7 +3,7 @@
   "productName": "test",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
+  "main": "src/Main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -53,6 +53,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
-    "electron": "16.0.8"
+    "electron": "^16.0.8"
   }
 }

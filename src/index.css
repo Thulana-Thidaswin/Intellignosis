@@ -62,7 +62,7 @@ body {
   right: 0px;
   float: right;
   width: 80%;
-  height: 120%;
+  height: 100%;
   background: url(../src/main-images/whiteBG.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;

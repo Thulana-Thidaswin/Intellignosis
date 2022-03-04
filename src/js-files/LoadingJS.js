@@ -1,1 +1,1 @@
-setTimeout(() => {  window.location.href="SignInScreenHTML.html"; }, 3750);
+setTimeout(() => {  window.location.href="DashboardScreenHTML.html"; }, 3750);

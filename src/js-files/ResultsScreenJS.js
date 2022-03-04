@@ -19,9 +19,9 @@ function dropDownMenu() {
     }
   }
 
-  const date = "2-7-2022";
-  const patientName = "Harees Baka";
-  const age = 27;
+  const date = "05-03-2022";
+  const patientName = "Arif Thidaswin";
+  const age = 20;
 
   const resultArray = ["The patient is suffering from <b>Minimal</b> Depression (BDI-II-).",
    "The patient is suffering from <b>Mild</b> Depression (BDI-II-20-28).",

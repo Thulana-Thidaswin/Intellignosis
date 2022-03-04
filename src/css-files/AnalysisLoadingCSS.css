@@ -24,7 +24,7 @@
     width: calc(var(--width, 0) * 1%);
     min-width: 2rem;
     max-width: calc(100% - 1em);
-    background-color: #806c6c;
+    background-color: grey;
     border-radius: 1em;
     padding: 1em;
 

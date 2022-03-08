@@ -4,13 +4,17 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import csv
+import os
+import openpyxl
+import pandas as pd
+from openpyxl.utils.dataframe import dataframe_to_rows
 sns.set(style='white', font_scale=1.2)
 
 # Scientific packages
 from numpy import loadtxt, array, mean, logical_and, trapz
 from scipy.signal import spectrogram, welch
 
-raw = mne.io.read_raw_edf("D:\IIT\Year 2 Sem 2\SDGP\Dataset 1\Testing-set\MDD-testing\MDD S29 EO.edf", preload=True, verbose=0)
+raw = mne.io.read_raw_edf("D:\IIT\Year 2 Sem 2\SDGP\Dataset 1\Training-set\MDD-training\M-EC\MDD S1 EC.edf", preload=True, verbose=0)
 
 # raw.plot
 
@@ -33,7 +37,8 @@ print()
 # print('Sampling frequency =', sf, 'Hz')
 # print('Data shape =', data.shape)
 
-rawC4 =raw.pick_channels(['EEG Fp1-LE' ])
+
+rawC4 =raw.pick_channels(['EEG F3-LE' ])
 print("Selected channel: ", rawC4)
 print("-----------------------------------------------")
 
@@ -87,19 +92,19 @@ bp = yasa.bandpower_from_psd(psd1, freqs1, ch_names=chanC4, bands=[(0.5,4, 'Ddel
 print("Absolute power bands")
 print()
 print(bp)
+file_name = "M-F3-list-EO.xlsx"
 
-# fields = ["Patient_num","Channel", "Delta", "Theta", "Alpha", "Sigma", "Beta", "Gamma", "1/0"]
-# rows = [bp]
+# create excel file
+if os.path.isfile(file_name):  # if file already exists append to existing file
+    workbook = openpyxl.load_workbook(file_name)  # load workbook if already exists
+    sheet = workbook['Sheet1']  # declare the active sheet 
 
-# filename = "mdd-bands.csv"
+    # append the dataframe results to the current excel file
+    for row in dataframe_to_rows(bp, header = False, index = False):
+        sheet.append(row)
+    workbook.save(file_name)  # save workbook
+    workbook.close()  # close workbook
+else:  # create the excel file if doesn't already exist
+    with pd.ExcelWriter(path = file_name, engine = 'openpyxl') as writer:
+        bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
 
-# # writing to csv file 
-# with open(filename, 'w') as csvfile: 
-#     # creating a csv writer object 
-#     csvwriter = csv.writer(csvfile) 
-        
-#     # writing the fields 
-#     csvwriter.writerow(fields) 
-        
-#     # writing the data rows 
-#     csvwriter.writerows(rows)

@@ -14,7 +14,7 @@ sns.set(style='white', font_scale=1.2)
 from numpy import loadtxt, array, mean, logical_and, trapz
 from scipy.signal import spectrogram, welch
 
-raw = mne.io.read_raw_edf("D:\IIT\Year 2 Sem 2\SDGP\Dataset 1\Training-set\MDD-training\M-EC\MDD S1 EC.edf", preload=True, verbose=0)
+raw = mne.io.read_raw_edf("D:\IIT\Year 2 Sem 2\SDGP\Dataset 1\Testing-set\MDD-testing\MDD S31 EC.edf", preload=True, verbose=0)
 
 # raw.plot
 
@@ -92,19 +92,19 @@ bp = yasa.bandpower_from_psd(psd1, freqs1, ch_names=chanC4, bands=[(0.5,4, 'Ddel
 print("Absolute power bands")
 print()
 print(bp)
-file_name = "M-F3-list-EO.xlsx"
+# file_name = "M-F3-list-EO.xlsx"
 
-# create excel file
-if os.path.isfile(file_name):  # if file already exists append to existing file
-    workbook = openpyxl.load_workbook(file_name)  # load workbook if already exists
-    sheet = workbook['Sheet1']  # declare the active sheet 
+# # create excel file
+# if os.path.isfile(file_name):  # if file already exists append to existing file
+#     workbook = openpyxl.load_workbook(file_name)  # load workbook if already exists
+#     sheet = workbook['Sheet1']  # declare the active sheet 
 
-    # append the dataframe results to the current excel file
-    for row in dataframe_to_rows(bp, header = False, index = False):
-        sheet.append(row)
-    workbook.save(file_name)  # save workbook
-    workbook.close()  # close workbook
-else:  # create the excel file if doesn't already exist
-    with pd.ExcelWriter(path = file_name, engine = 'openpyxl') as writer:
-        bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
+#     # append the dataframe results to the current excel file
+#     for row in dataframe_to_rows(bp, header = False, index = False):
+#         sheet.append(row)
+#     workbook.save(file_name)  # save workbook
+#     workbook.close()  # close workbook
+# else:  # create the excel file if doesn't already exist
+#     with pd.ExcelWriter(path = file_name, engine = 'openpyxl') as writer:
+#         bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
 

@@ -1,0 +1,1 @@
+npm I express bcryptjs passport passport-local express-ejs-layouts mongoose connect-flash express-session

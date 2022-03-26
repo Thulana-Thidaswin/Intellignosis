@@ -53,7 +53,9 @@ app.use((req, res, next) => {
 app.use(express.static('public'))
 
 
-//const mongoose = require('mongoose')
+const mongoose = require('mongoose')
+
+
 //const ldb = require('./config/keys').MongoURI;
 //mongoose.connect(ldb, { useNewURLParser: true })
  //   .then(() => console.log("MongoDB Connected..."))

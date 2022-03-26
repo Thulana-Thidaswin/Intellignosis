@@ -1,0 +1,17 @@
+name: pyLint 
+
+on: push
+
+jobs:
+    pyLint:
+      name: Lint code base
+      runs-on: ubuntu latest
+      steps:
+        -name: Code check
+        uses: actions/checkout@v2
+        
+        -name: Run-Lintter
+        uses: github/pyLint@v3
+        env:
+           DEFAULT_BRACH: main
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

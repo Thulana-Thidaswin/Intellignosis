@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 //loading the user model 
-const User = require('C:/Users/arifz_t8hzclv/OneDrive/Documents/uni stuffs/testCodes/nodejs/WDS/NewProject/models');
+const User = require('../models/User.js');
 const flash = require('connect-flash');
 
 module.exports = function(passport) {

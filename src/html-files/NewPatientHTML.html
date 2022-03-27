@@ -6,6 +6,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <title>Intellignosis</title>
   <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
@@ -36,7 +37,8 @@
       
       <h2>Please fill in this form in order to proceed.</h2>
       <br>
-      <form>
+      <form type="get" action="AnalyzeScreenHTML.html" for="Name">
+	
       <label for="Name">Your name</label>
       <input type="text" placeholder="First and Last name" name="PatientName" required>
       <br>
@@ -50,25 +52,21 @@
       <br>
       <br>
       <label for="email">Email</label>
-      <input type="text" placeholder="Enter Email ( if patient has onne )" name="email">
+      <input type="text" placeholder="Enter Email ( if patient has one )" name="email">
       <br>
       <br>
-      <label for="Occupation">Your job</label>
-      <input type="text" placeholder="Enter Patients Job" name="PatientJob">
-      <br>
-      
+      <input type="submit" value="Proceed" class="Proceed botButton"> 
       </form>
-       
-	   <br> <br>
-      <p>By Using Intellignosis you agree to our <a href="#" style="color: #000000"><b>Terms & Privacy</a></p></b>
+      
+	  <br>
 	  <br>
 
-      <div>
-        <button type="button" class="cancel botButton">Cancel</button>
-        <button type="submit" class="Proceed botButton">Proceed</button>
-      </div>
-    </div>
 
+      <div>
+        <input type="submit"  class="Cansel botButton" value="Cancel" onclick="if(confirm('Are you SURE you wish to cancel?')) history.back();" />
+        
+      </div>
+    
 
   </div>
 </body>

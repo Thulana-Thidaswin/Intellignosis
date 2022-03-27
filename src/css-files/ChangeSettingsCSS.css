@@ -1,19 +1,4 @@
 
-
-.option{
-    background-color: #c4c4c4;
-    color: black;
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 2px solid;
-    position:absolute;
-    margin: 150px 80px 80px 200px;
-    border-radius: 10px;
-    width:20%;
-    padding: 2px;
-
-    
-}
 #gobacklink{
     font-size: 25px;
     text-decoration: none;
@@ -23,20 +8,6 @@
     top: 15px;
 }
 
-.option2{
-    background-color: #c4c4c4;
-    color: black;
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border:2px solid;
-    position: absolute;
-    margin: 150px 80px 80px 725px;
-    border-radius: 10px;
-    width:20%;
-    padding: 2px;
-    
-    
-}
 .space{
     padding: 10px;
 }
@@ -55,10 +26,8 @@ a:link, a:visited {
     background-color: #c4c4c4;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align:left;
+    text-align: 30%;
     margin-left: 25%;
-    border:2px solid;
-    border-radius: 10px;
     width: 50%;
     padding: 10px;
     margin-right: 10%;
@@ -71,5 +40,55 @@ a:link, a:visited {
     border:2px solid;
     border-radius: 10px;
     border-color: black;
-    width: 20%;
+    padding: 10px 40px 10px 40px;
+    margin-left: 40%;
+    cursor: pointer;
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: ;
+  padding: 16px;
+  text-align: center;
+  background-color: #D3D3D3;
+  color: white;
+  margin-top:50%;
+  margin-left:10%;
+  margin-right:10%;
+    
+}
+

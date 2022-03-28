@@ -6,6 +6,7 @@ const passport = require('passport');
 
 const User = require('../models/User')
 
+
 router.get('/login', (req, res) => {
     res.render('login')
 })
@@ -15,10 +16,10 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/register', (req, res) => {
-    const { name, email, password, password2 } = req.body;
+    const { name, email, password, password2, age, location, occupation } = req.body;
     let errors = [];
   
-    if (!name || !email || !password || !password2) {
+    if (!name || !email || !password || !password2 || !age) {
       errors.push({ msg: 'Please enter all fields' });
     }
   
@@ -36,7 +37,10 @@ router.post('/register', (req, res) => {
         name,
         email,
         password,
-        password2
+        password2,
+        age,
+        location,
+        occupation
       });
     } else {
       User.findOne({ email: email }).then(user => {
@@ -47,14 +51,20 @@ router.post('/register', (req, res) => {
             name,
             email,
             password,
-            password2
+            password2,
+            age,
+            location,
+            occupation
           });
         } else {
           
           const newUser = new User({
             name,
             email,
-            password
+            password,
+            age,
+            location,
+            occupation
           });
   
           
@@ -82,13 +92,20 @@ router.post('/register', (req, res) => {
     }
   });
 
+  //login handling
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
     successRedirect: '/dashboard',
     failureRedirect: '/users/login',
-    failureFlash: true,
-  })(req, res, next)
-
+    failureFlash: true
+  })(req, res, next);
 });
+
+//logout handling
+router.get('/logout', (req, res) => {
+  req.logOut();
+  req.flash('successMsg', 'You are now logged out');
+  res.redirect('/users/login');
+})
 
 module.exports = router

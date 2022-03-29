@@ -16,6 +16,16 @@ const UserSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  age: {
+    type: Number,
+    required: true
+  },
+  location: {
+    type: String,
+  },
+  occupation: {
+    type: String,
   }
 });
 

@@ -12,6 +12,8 @@ const passport = require('passport');
 //const indexRouter = require('./routes/index')
 //const userRouter = require('./routes/users')
 
+require('events').EventEmitter.prototype._maxListeners = 100;
+
 //passport stuff
 require('./config/passport')(passport);
 require('./models/User')(passport);
@@ -42,10 +44,18 @@ app.use(passport.session());
 //connect flash tings
 app.use(flash());
 
+//global variables
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
+
 //creating diff colors
 app.use((req, res, next) => {
-    res.locals.successMsg = req.flash('successMsg');
-    res.locals.errorsMsg = req.flash('errorsMsg');
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
     next();
 });
 
@@ -58,8 +68,8 @@ const mongoose = require('mongoose')
 
 //const ldb = require('./config/keys').MongoURI;
 //mongoose.connect(ldb, { useNewURLParser: true })
- //   .then(() => console.log("MongoDB Connected..."))
- //   .catch(err => console.error(err))
+//   .then(() => console.log("MongoDB Connected..."))
+//   .catch(err => console.error(err))
 
 // DONT REMOVE THIS BALLO
 //might wanna check this

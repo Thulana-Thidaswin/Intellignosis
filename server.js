@@ -8,6 +8,7 @@ const expressLayouts = require('express-ejs-layouts')
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const path = require('path');
 
 //const indexRouter = require('./routes/index')
 //const userRouter = require('./routes/users')
@@ -52,12 +53,7 @@ app.use((req, res, next) => {
     next();
 });
 
-//creating diff colors
-app.use((req, res, next) => {
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    next();
-});
+
 
 
 app.use(express.static('public'))

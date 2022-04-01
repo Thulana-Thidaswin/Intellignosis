@@ -7,28 +7,6 @@
     top: 15px;
 }
 
-.dropdown{
-    text-align: left;
-    margin: 100px 20px 20px 100px;
-    font-size: 30px;
-}
-.addpatient{
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    border:2px solid;
-    border-radius: 20px;
-    width: 10%;
-    padding: 10px 15px 10px 15px;
-    margin: 0px 7px 15px 150px;
-    cursor: pointer;
-}
-
-.addpatient:hover {
-    background-color: #A9A9A9;
-}
-
 .addpdiv{
     text-align: left;
     margin: 20px 20px 20px 20px;

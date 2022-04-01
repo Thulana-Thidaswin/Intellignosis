@@ -1,0 +1,1 @@
+setTimeout(() => {  window.location.href="SignInScreenHTML.html"; }, 3750);

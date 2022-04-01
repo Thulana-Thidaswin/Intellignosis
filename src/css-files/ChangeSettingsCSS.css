@@ -1,0 +1,75 @@
+
+
+.option{
+    background-color: #c4c4c4;
+    color: black;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid;
+    position:absolute;
+    margin: 150px 80px 80px 200px;
+    border-radius: 10px;
+    width:20%;
+    padding: 2px;
+
+    
+}
+#gobacklink{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.option2{
+    background-color: #c4c4c4;
+    color: black;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:2px solid;
+    position: absolute;
+    margin: 150px 80px 80px 725px;
+    border-radius: 10px;
+    width:20%;
+    padding: 2px;
+    
+    
+}
+.space{
+    padding: 10px;
+}
+.space2{
+    padding-bottom: 90px;
+}
+a:link, a:visited {
+    color: black;
+    text-decoration: none; 
+}
+.topSpace{
+    margin-top:10%;
+    margin-left:10%;
+}
+.leftmerge{
+    background-color: #c4c4c4;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align:left;
+    margin-left: 25%;
+    border:2px solid;
+    border-radius: 10px;
+    width: 50%;
+    padding: 10px;
+    margin-right: 10%;
+}
+.buttonRight{
+    background-color: black;
+    color: white;
+    margin-left: 43%;
+    margin-top: 5%;
+    border:2px solid;
+    border-radius: 10px;
+    border-color: black;
+    width: 20%;
+}

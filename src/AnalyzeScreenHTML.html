@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Intellignosis</title>
+	<link rel="icon" href="main-images/ciruclarcroppedlogo_1WL_icon.ico">
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="AnalyzeScreenCSS.css"/>
+    <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+    <div class="sidePanel">
+      <!-- Don't make any changes to this panel  -->
+      <img src="main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+      <div class="spbtnpanel">
+        <button type="button" class="spbtn" onclick="window.location.href='../html-files/DashboardScreenHTML.html'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='../html-files/AnalyzeScreenHTML.html'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+        <button type="button" class="spbtn" onclick="window.location.href='../html-files/SettingsScreenHTML.html'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+      </div>  
+      <span class="AboutText"><p>Intellignosis® version 1.0.0<br>
+        Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
+    </div>
+    <div class="mainPanel">
+
+      <a href="javascript:history.back()" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
+
+      <div class="dropdown">
+        <label for="list" >Select patient: </label>
+        <select name="list" id="list">
+          <option value="Thulana">Thulana</option>
+          <option value="Saad">Saad</option>
+          <option value="Harees">Harees</option>
+          <option value="Arif">Arif</option>
+          <option value="Sandali">Sadali</option>
+        </select>
+
+      </div>
+
+      <div class="addpdiv">
+        <button class="addpatient" type="add">Add Patient</button>
+      </div>
+
+      <div class="upload-edf">
+        <form method="post" action="/" enctype="multipart/form-data" >
+          <input type="text" placeholder="Browse ."/>
+          <input type="file" name="file" required/>
+          <input type="submit" value="Analyze"/>
+          <!-- <button id="upload-button" class="analyzediv" onclick="uploadFile(this.form)">Analyze</button> -->
+        </form>
+        <div id="static_file_response"> </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="AnalyzeScreenJS.js"></script>
+  </body>
+</html>

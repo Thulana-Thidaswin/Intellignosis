@@ -1,0 +1,71 @@
+html, body {
+    max-width: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+
+.title {
+	font-size: 30px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.examsTitle {
+	font-size: 22px;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.personalInfoLayout {
+	display: grid;
+	width: 50%;
+	grid-template-columns: 65% 35%;
+	grid-template-rows: auto;
+	margin-left: 10%;
+	}
+
+th, td {
+	text-align: left;
+	padding: 0 25px;
+}
+
+table {
+	margin: auto;
+}
+
+table.infoTable {
+	margin: 0;
+}
+
+table.infoTable .col1 {
+	width: 80px;
+	background-color: rgba(48, 48, 48, 0.22);
+}
+
+table.tasks .col1 {
+	background-color: rgba(0, 0, 0, 0.12);
+	width: 100px;
+}
+
+.Img {
+	width: 500px;
+	height: 300px;
+	margin: auto;
+}
+
+.container {
+  color: black; 
+}
+
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 62.5%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+}
+
+

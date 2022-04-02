@@ -1,103 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8" />
-    <title>Intellignosis</title>
-	<link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
- 
-  <style type="text/css">
-
- 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      max-width: 100%;
-      max-height: 100%;
-      text-align: center;
-      background-color: #ffffff;
-    }
-
-   
-
-    .registerDiv {
-      position: absolute;
-      right: 50%;
-      width: 50%;
-      height: 100%;
-
-      
-    }
-
-    .loginDiv {
-      position: absolute;
-      left: 50%;
-      width: 50%;
-      height: 100%;
-     
-    }
-
-    p {
-      font-size: 15px;
-    }
-
-    .loginDiv p {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-    }
-
-    .registerDiv p {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      
-    }
-
-    .registerDiv:hover {
-      background-color:black;
-      transition: 0.5s;
-      color: white;
-    }
-
-    .loginDiv:hover {
-      background-color:black;
-      transition: 0.5s;
-      color: white;
-    }
-
-    .loginDiv:focus {
-      background-color:black;
-      
-      color: white;
-    }
-
-
-  </style>
-</head>
-
-
-<body>
-  
-  <button onclick="window.location.href='/users/register'" class="registerDiv">
-    <p><b>Register</b></p>
-  </button>
-  <button onclick="window.location.href='/users/login'" class="loginDiv">
-    <p><b>Login</b></p>
-  </button>
-
-</body>
-
-</html>
-
-
-
-
- 
-        
-        
-        
- 
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body text-center">
+        <h1><i class="fab fa-node-js fa-3x"></i></h1>
+        <p>Create an account or login</p>
+        <a href="/users/register" class="btn btn-primary btn-block mb-2"
+          >Register</a
+        >
+        <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+      </div>
+    </div>
+  </div>

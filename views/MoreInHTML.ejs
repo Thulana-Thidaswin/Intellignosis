@@ -10,21 +10,19 @@
   <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
   <style type="text/css">
     .title {
-	font-size: 30px;
-	text-align: center;
-	padding-bottom: 10px;
-}
+      font-size: 30px;
+      text-align: center;
+      padding-bottom: 10px;
+    }
 
-.text{
-	font-size: 20px;
-	padding-bottom: 10px;
-}
-img {
-    max-width: 100%;
-}
+    .text {
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
 
-
-
+    img {
+      max-width: 100%;
+    }
   </style>
 </head>
 
@@ -33,9 +31,12 @@ img {
     <!-- Don't make any changes to this panel  -->
     <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
     <div class="spbtnpanel">
-      <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i
+          class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i
+          class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i
+          class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
     </div>
     <span class="AboutText">
       <p>Intellignosis® version 1.0.0<br>
@@ -44,11 +45,42 @@ img {
   </div>
   <div class="mainPanel">
     <a href="javascript:history.back()" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
-	
-	<h1 class="title"><strong>Intellignosis</strong></h1>
-	<br>
-	<p class="text">Depression is a primary mental disorder that has become one of the leading causes of death by suicide. Common practices of diagnosing and ranking depression are by using screening tests and questionnaires to patients. These traditional methods are time-consuming, and mistakes are often made. So, it’s essential for an automated method to diagnose and rank depression. This paper proposes using EEG signals for this. EEG signals are emitted by the brain and is a cheap way of identifying brain related issues. Hence, this method becomes a foolproof and inexpensive method of diagnosing and ranking depression and therefore can be utilized in education institutions like schools and universities where it is needed the most. A software, apltly named ‘Intellignosis’ is proposed, which contains the necessary feature selection, ranking and classification techniques to identify and rank depression. Initially an introduction is given regarding the topic and research gap which is then elaborated upon in the literature review where prior research and tools and techniques are discussed in detail. It is followed by the methodologies used during the course of this project and then the system requirements specification is discussed in detail which is followed by the social, legal, ethical and professional issues and the necessary mitigations.</p> 
+
+    <h1 class="title"><strong>Intellignosis</strong></h1>
+    <br>
+    <p class="text">Depression is a primary mental disorder that has become one of the leading causes of death by
+      suicide. Common practices of diagnosing and ranking depression are by using screening tests and questionnaires to
+      patients. These traditional methods are time-consuming, and mistakes are often made. So, it’s essential for an
+      automated method to diagnose and rank depression. This paper proposes using EEG signals for this. EEG signals are
+      emitted by the brain and is a cheap way of identifying brain related issues. Hence, this method becomes a
+      foolproof and inexpensive method of diagnosing and ranking depression and therefore can be utilized in education
+      institutions like schools and universities where it is needed the most. A software, apltly named ‘Intellignosis’
+      is proposed, which contains the necessary feature selection, ranking and classification techniques to identify and
+      rank depression. Initially an introduction is given regarding the topic and research gap which is then elaborated
+      upon in the literature review where prior research and tools and techniques are discussed in detail. It is
+      followed by the methodologies used during the course of this project and then the system requirements
+      specification is discussed in detail which is followed by the social, legal, ethical and professional issues and
+      the necessary mitigations.</p>
+    <script>
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+          s.addEventListener('load', function () {
+            var myLandbot = new Landbot.Livechat({
+              configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+    </script>
   </div>
-  
+
 </body>
+
 </html>

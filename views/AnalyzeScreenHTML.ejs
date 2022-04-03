@@ -4,121 +4,150 @@
 <!-- TODO: Also discuss about the code repetition issue -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Intellignosis</title>
-	<link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
-    <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="/css/shared/AnalyzeScreenCSS.css" />
-	<script src="../js-files/AnalyzeScreenJS.js"></script>
-    <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 
-    <style type="text/css">
-      #gobacklink{
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <title>Intellignosis</title>
+  <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="/css/shared/AnalyzeScreenCSS.css" />
+  <script src="../js-files/AnalyzeScreenJS.js"></script>
+  <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 
-.dropdown{
-    text-align: left;
-    margin: 100px 20px 20px 100px;
-    font-size: 30px;
-}
-.addpatient{
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    border:2px solid;
-    border-radius: 20px;
-    width: 10%;
-    padding: 10px 15px 10px 15px;
-    margin: 0px 7px 15px 150px;
-    cursor: pointer;
-}
+  <style type="text/css">
+    #gobacklink {
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
 
-.addpatient:hover {
-    background-color: #A9A9A9;
-}
+    .dropdown {
+      text-align: left;
+      margin: 100px 20px 20px 100px;
+      font-size: 30px;
+    }
 
-.addpdiv{
-    text-align: left;
-    margin: 20px 20px 20px 20px;
-    font-size: 20px;
-}
-.topnav{
-    text-align: center;
-    margin: 20px 20px 20px 20px;
-    font-size: 50px;
-}
-.analyzediv{
-    background-color: black;
-    font-size: 20px;
-    text-decoration: none;
-    border:2px solid;
-    border-radius: 20px;
-    width: 20%;
-    color: white;
-    padding: 10px 50px 10px 50px;
-    margin: 15px 7px 15px 0px;
-    cursor: pointer;
-}
+    .addpatient {
+      background-color: black;
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+      border: 2px solid;
+      border-radius: 20px;
+      width: 10%;
+      padding: 10px 15px 10px 15px;
+      margin: 0px 7px 15px 150px;
+      cursor: pointer;
+    }
 
-.analyzediv:hover {
-    background-color: #A9A9A9;
-}
-    </style>
-  </head>
-  <body>
-    <div class="sidePanel">
-      <!-- Don't make any changes to this panel  -->
-      <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
-      <div class="spbtnpanel">
-        <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
-      </div>  
-      <span class="AboutText"><p>Intellignosis® version 1.0.0<br>
-        Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
+    .addpatient:hover {
+      background-color: #A9A9A9;
+    }
+
+    .addpdiv {
+      text-align: left;
+      margin: 20px 20px 20px 20px;
+      font-size: 20px;
+    }
+
+    .topnav {
+      text-align: center;
+      margin: 20px 20px 20px 20px;
+      font-size: 50px;
+    }
+
+    .analyzediv {
+      background-color: black;
+      font-size: 20px;
+      text-decoration: none;
+      border: 2px solid;
+      border-radius: 20px;
+      width: 20%;
+      color: white;
+      padding: 10px 50px 10px 50px;
+      margin: 15px 7px 15px 0px;
+      cursor: pointer;
+    }
+
+    .analyzediv:hover {
+      background-color: #A9A9A9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidePanel">
+    <!-- Don't make any changes to this panel  -->
+    <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+    <div class="spbtnpanel">
+      <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i
+          class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i
+          class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i
+          class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
     </div>
-    <div class="mainPanel">
+    <span class="AboutText">
+      <p>Intellignosis® version 1.0.0<br>
+        Trademark of Intellignosis<br> CAD, Sri Lanka</p>
+    </span>
+  </div>
+  <div class="mainPanel">
 
-      <a href="javascript:history.back()" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
+    <a href="javascript:history.back()" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
 
-      <div class="dropdown">
-        <label for="list" >Select patient: </label>
-        <select name="list" id="Patientlist">
-          <option value="Thulana">Thulana</option>
-          <option value="Saad">Saad</option>
-          <option value="Harees">Harees</option>
-          <option value="Arif">Arif</option>
-          <option value="Sandali">Sadali</option> 
-		  
-        </select>
+    <div class="dropdown">
+      <label for="list">Select patient: </label>
+      <select name="list" id="Patientlist">
+        <option value="Thulana">Thulana</option>
+        <option value="Saad">Saad</option>
+        <option value="Harees">Harees</option>
+        <option value="Arif">Arif</option>
+        <option value="Sandali">Sadali</option>
 
-      </div>
-
-      <div class="addpdiv">
-        <button class="addpatient" type="add" onclick="window.location.href='/NewPatientHTML'">Add Patient</button>
-      </div>
-
-      <div class="topnav">
-        <input type="text" placeholder="Browse .">
-        <input type="file" id="myfile" name="myfile">
-      </div>
-
-      <div id="dropContainer" style="height:100px;">
-        Drag and Drop Here
-      </div>
-
-      <div class="analyze">
-        <button type="button" class="analyzediv" onclick="window.location.href='/AnalysisLoadingHTML'">Analyze</button>
-      </div>
+      </select>
 
     </div>
-  </body>
+
+    <div class="addpdiv">
+      <button class="addpatient" type="add" onclick="window.location.href='/NewPatientHTML'">Add Patient</button>
+    </div>
+
+    <div class="topnav">
+      <input type="text" placeholder="Browse .">
+      <input type="file" id="myfile" name="myfile">
+    </div>
+
+    <div id="dropContainer" style="height:100px;">
+      Drag and Drop Here
+    </div>
+
+    <div class="analyze">
+      <button type="button" class="analyzediv" onclick="window.location.href='/AnalysisLoadingHTML'">Analyze</button>
+    </div>
+    <script>
+			window.addEventListener('mouseover', initLandbot, { once: true });
+			window.addEventListener('touchstart', initLandbot, { once: true });
+			var myLandbot;
+			function initLandbot() {
+				if (!myLandbot) {
+					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+					s.addEventListener('load', function () {
+						var myLandbot = new Landbot.Livechat({
+							configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+						});
+					});
+					s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+					var x = document.getElementsByTagName('script')[0];
+					x.parentNode.insertBefore(s, x);
+				}
+			}
+		</script>
+
+  </div>
+</body>
+
 </html>

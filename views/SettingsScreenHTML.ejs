@@ -4,72 +4,99 @@
 <!-- TODO: Also discuss about the code repetition issue -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Intellignosis</title>
-	<link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
-    <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="/css/shared/SettingsScreenCSS" />
-    <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 
-    <style type="text/css">
-      #gobacklink{
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-    position: absolute;
-    left: 15px;
-    top: 15px;   
-}
+<head>
+  <meta charset="UTF-8" />
+  <title>Intellignosis</title>
+  <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="/css/shared/SettingsScreenCSS" />
+  <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 
-.sett{
-    background-color: #c4c4c4;
-    color: black;
-    font-size: 25px;
-    padding: 30px;
-    margin: 150px 100px 2px 80px;
-    border-radius: 20px;
-    border: none;
-    width: 80%;
-    transition-duration: 0.4s;
-}
+  <style type="text/css">
+    #gobacklink {
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
 
-.sett:hover{
-    background-color: black;
-    color: white;
-  }
+    .sett {
+      background-color: #c4c4c4;
+      color: black;
+      font-size: 25px;
+      padding: 30px;
+      margin: 150px 100px 2px 80px;
+      border-radius: 20px;
+      border: none;
+      width: 80%;
+      transition-duration: 0.4s;
+    }
 
-.settb{
-    margin-top: 15px;
-}
+    .sett:hover {
+      background-color: black;
+      color: white;
+    }
 
-    </style>
+    .settb {
+      margin-top: 15px;
+    }
+  </style>
 
-  </head>
-  <body>
-    <div class="sidePanel">
-      <!-- Don't make any changes to this panel  -->
-      <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
-      <div class="spbtnpanel">
-        <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
-      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
-      </div>  
-      <span class="AboutText"><p>Intellignosis® version 1.0.0<br>
-        Trademark of Intellignosis<br> CAD, Sri Lanka</p></span>
+</head>
+
+<body>
+  <div class="sidePanel">
+    <!-- Don't make any changes to this panel  -->
+    <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+    <div class="spbtnpanel">
+      <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i
+          class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i
+          class="fas fa-chart-area"></i>&nbsp;&nbsp;Analyze</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i
+          class="fas fa-tools"></i>&nbsp;&nbsp;Settings</button><br>
     </div>
-    <div class="mainPanel">
-      <a href="javascript:history.back()" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
-      <div class="settb">
-        <table>
-          <tr>
-            <button class="sett" onclick="window.location.href='/AccountSettingsHTML'"><i class="fa fa-gear" style="font-size:28px;">Account Settings</button></i>
-            <button class="sett" onclick="window.location.href='/AboutHTML'"><i class="fas fa-edit" style="font-size:28px;">About Intellignosis</button></i>
-          </tr>
-            
-        </table>  
-      </div>
+    <span class="AboutText">
+      <p>Intellignosis® version 1.0.0<br>
+        Trademark of Intellignosis<br> CAD, Sri Lanka</p>
+    </span>
+  </div>
+  <div class="mainPanel">
+    <a href="javascript:history.back()" id="gobacklink"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go back</a>
+    <div class="settb">
+      <table>
+        <tr>
+          <button class="sett" onclick="window.location.href='/AccountSettingsHTML'"><i class="fa fa-gear"
+              style="font-size:28px;">Account Settings</button></i>
+          <button class="sett" onclick="window.location.href='/AboutHTML'"><i class="fas fa-edit"
+              style="font-size:28px;">About Intellignosis</button></i>
+        </tr>
 
+      </table>
     </div>
-  </body>
+    <script>
+			window.addEventListener('mouseover', initLandbot, { once: true });
+			window.addEventListener('touchstart', initLandbot, { once: true });
+			var myLandbot;
+			function initLandbot() {
+				if (!myLandbot) {
+					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+					s.addEventListener('load', function () {
+						var myLandbot = new Landbot.Livechat({
+							configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+						});
+					});
+					s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+					var x = document.getElementsByTagName('script')[0];
+					x.parentNode.insertBefore(s, x);
+				}
+			}
+		</script>
+
+  </div>
+</body>
+
 </html>

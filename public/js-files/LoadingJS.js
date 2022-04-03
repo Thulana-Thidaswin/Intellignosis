@@ -1,0 +1,1 @@
+setTimeout(() => {  window.location.href="DashboardScreenHTML.html"; }, 3750);

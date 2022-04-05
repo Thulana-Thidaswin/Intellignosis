@@ -10,13 +10,71 @@
   <meta charset="UTF-8" />
   <title>Intellignosis</title>
   <link rel="icon" href="/main-images/ciruclarcroppedlogo_1WL_icon.ico">
-  <link rel="stylesheet" href="../index.css" />
-  <link rel="stylesheet" href="/css/shared/AccountSettingsCSS" />
   <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 
   <style type="text/css">
+    #profileImage {
+      margin: 20px 0px 20px 0px;
+      opacity: 1;
+      display: block;
+      width: 20%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      
+    }
 
+    #gobacklink {
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
 
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 20%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+    .container {
+      width: 50%;
+      display:flex;
+      align-content: center;
+      justify-content: center;
+    }
+    
+    .container:hover .image {
+      opacity: 0.3;
+    }
+
+    .container:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      background-color: grey;
+      color: white;
+      font-size: 20px;
+      padding: 16px 32px;
+    }
+
+   
   </style>
 
 
@@ -51,30 +109,27 @@
         <p>Student</p>
         <p>45/A Kalid road, Saudi</p>
         <p>#001</p>
-        <a href="/ChangeScreenHTML">
-          <p><button class="botButton">Edit Profile</button></p>
-        </a>
       </div>
     </div>
     <script>
-			window.addEventListener('mouseover', initLandbot, { once: true });
-			window.addEventListener('touchstart', initLandbot, { once: true });
-			var myLandbot;
-			function initLandbot() {
-				if (!myLandbot) {
-					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-					s.addEventListener('load', function () {
-						var myLandbot = new Landbot.Livechat({
-							configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
-						});
-					});
-					s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-					var x = document.getElementsByTagName('script')[0];
-					x.parentNode.insertBefore(s, x);
-				}
-			}
-		</script>
-  </div> 
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+          s.addEventListener('load', function () {
+            var myLandbot = new Landbot.Livechat({
+              configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+    </script>
+  </div>
 </body>
 
 </html>

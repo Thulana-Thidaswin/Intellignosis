@@ -1,1 +1,1 @@
-setTimeout(() => {  window.location.href="DashboardScreenHTML.html"; }, 3750);
+setTimeout(() => {  window.location.href="WelcomeHTML.html"; }, 3750);

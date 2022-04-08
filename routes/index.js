@@ -31,9 +31,6 @@ router.get('/AnalysisLoadingHTML', (req, res) => {
     res.render('AnalysisLoadingHTML');
 })
 
-router.get('/AnalyzeScreenHTML', (req, res) => {
-    res.render('AnalyzeScreenHTML');
-})
 
 
 router.get('/BirthdatechangeHTML', (req, res) => {

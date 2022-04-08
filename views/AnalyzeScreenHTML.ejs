@@ -11,7 +11,7 @@
   <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
   <link rel="stylesheet" href="../index.css" />
   <link rel="stylesheet" href="/css/shared/AnalyzeScreenCSS.css" />
-  <script src="../js-files/AnalyzeScreenJS.js"></script>
+  <script src="C:/Users/arifz_t8hzclv/OneDrive/Documents/uni stuffs/testCodes/nodejs/WDS/MLBACKEND/routes/analyze.js"></script>
   <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
 
   <style type="text/css">
@@ -101,20 +101,20 @@
 
    
     
-    <div class="topnav">
-      <br>
-      <br>
-      <input type="text" placeholder="Browse .">
-      <input type="file" id="myfile" name="myfile">
+    <div class="upload-edf">
+      <form method="POST" action="/" enctype="multipart/form-data" >
+        <input type="text" placeholder="Browse ."/>
+        <input type="file" name="file" required/>
+        <input type="submit" value="Analyze"/>
+        <!-- <button id="upload-button" class="analyzediv" onclick="uploadFile(this.form)">Analyze</button> -->
+      </form>
     </div>
 
-    <div id="dropContainer" style="height:100px;">
-      Drag and Drop Here
-    </div>
 
-    <div class="analyze">
-      <button type="button" class="analyzediv" onclick="window.location.href='/AnalysisLoadingHTML'">Analyze</button>
-    </div>
+
+
+
+
     <script>
 			window.addEventListener('mouseover', initLandbot, { once: true });
 			window.addEventListener('touchstart', initLandbot, { once: true });

@@ -66,8 +66,8 @@ const mongoose = require('mongoose')
 
 const ldb = require('./config/keys').MongoURI;
 mongoose.connect(ldb, { useNewURLParser: true })
-  .then(() => console.log("MongoDB Connected..."))
-  .catch(err => console.error(err))
+ .then(() => console.log("MongoDB Connected..."))
+ .catch(err => console.error(err))
 
 // DONT REMOVE THIS BALLO
 //might wanna check this

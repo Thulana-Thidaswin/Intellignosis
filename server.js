@@ -79,6 +79,8 @@ mongoose.connect(ldb, { useNewURLParser: true })
 app.use('/', require('./routes/index')) 
 app.use('/users', require('./routes/users'))
 app.use('/', require('./routes/analyze'))
+app.use('/', require('./routes/results'))
+
 
 app.listen(process.env.PORT || 3000)
 

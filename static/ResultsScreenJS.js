@@ -19,7 +19,16 @@ function dropDownMenu() {
     }
   }
 
-  const date = "05-03-2022";
+  //Getting current date
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  today = dd + '/' + mm + '/' + yyyy;
+  document.write(today);
+
+  const date = today;
   const patientName = "Arif Thidaswin";
   const age = 20;
 
@@ -29,9 +38,6 @@ function dropDownMenu() {
     "The patient is suffering from <b>Severe</b> Depression (BDI-II-20-28)."];
 
   const result = 3;
-
-  
-  
 
   function changeName() {
     document.getElementById("details").innerHTML = "Date          : " + date + "<br>Patient Name  : " + patientName + "<br>Patient Age   : " + age + " years";

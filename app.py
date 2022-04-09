@@ -14,16 +14,15 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-model = pickle.load(open("src/model.pk1", "rb"))
 
-@app.route('/')
-# def results():
-#    return render_template('ResultsScreenHTML.html')
+if __name__ == "__main__":
+    app.run(debug=True ,port=8080,use_reloader=False)
 
-@app.route('/predict', methods=['POST'])
-def predict():
+
+@app.route("/")
+def index():
     # Scientific packages
-    list_of_files = glob.glob('src/Upload/*.edf')
+    list_of_files = glob.glob('Upload/*.edf')
     # print(list_of_files)
     latest_file = max(list_of_files, key=os.path.getctime)
 
@@ -37,18 +36,7 @@ def predict():
     sf = raw.info['sfreq']
     chan = raw.ch_names
 
-    # Let's have a look at the data
-    # print()
-    # print("-----------------------------------------------")
-    # print()
-    # print('Chan =', chan)
-    # print()
-    # print("-----------------------------------------------")
-    # print()
-
     rawC4 =raw.pick_channels(['EEG C3-LE' ])
-    # print("Selected channel: ", rawC4)
-    # print("-----------------------------------------------")
 
     # Extract the data and convert from V to uV
     dataC4 = rawC4._data * 1e6
@@ -67,28 +55,14 @@ def predict():
 
     psd1 = psd1.reshape(513)
 
-    # Relative power: sum of all (non-overlapping and sequential) bands equals to 1
-    # print()
-    # print("Relative power bands")
-    # print()
-    # print(yasa.bandpower_from_psd(psd1, freqs1, ch_names=chanC4))
-    # print()
-    # print("-----------------------------------------------")
-
     # Absolute power, using different bands
     bp = yasa.bandpower_from_psd(psd1, freqs1, ch_names=chanC4, bands=[(13,22,'Beta'),(22, 40, 'Gamma')], relative=False)
 
-    # print("Absolute power bands")
-    # print()
-    # print(bp)
     # Create a Numpy Array of integers
     arr = np.array([])
     test = bp.bands_[2]
-    # print(test)
-    # print(arr)
-    # os.chdir("src/Tabulars")
 
-    file_name = "src/Tabulars/Absolute-bands.xlsx"
+    file_name = "Tabulars/Absolute-bands.xlsx"
 
     # create excel file
     if os.path.isfile(file_name):  # if file already exists append to existing file
@@ -104,12 +78,9 @@ def predict():
         with pd.ExcelWriter(path = file_name, engine = 'openpyxl') as writer:
             bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
 
-    # os.chdir("../src/Upload")
     os.remove(latest_file)
 
-    # os.chdir("../src/Tabulars")
-
-    df = pd.read_excel("src/Tabulars/Absolute-bands.xlsx")
+    df = pd.read_excel("Tabulars/Absolute-bands.xlsx")
     betaFreqs = df["Beta"].tolist()
     gammaFreqs = df["Gamma"].tolist()
     allFreqs = betaFreqs + gammaFreqs
@@ -117,9 +88,11 @@ def predict():
     convertedArr = np.reshape(betaFreqs, (-1, 1))
     print(convertedArr)
 
+    model = pickle.load(open("model.pk1", "rb"))
+
     prediction = model.predict(convertedArr)
 
-    os.remove("src/Tabulars/Absolute-bands.xlsx")
+    os.remove("Tabulars/Absolute-bands.xlsx")
 
     print(prediction)
 
@@ -131,14 +104,8 @@ def predict():
     # myStr = "HEyyyy"
     # print(predAsString+myStr)
 
-    file = open("newoutput.txt", "w")
-    # prediction = repr(predAsString)
-    file.write(predAsString)
-    file.close
-    return render_template('ResultsScreenHTML.html', prediction_text=prediction)
-predict()    
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-app.listen(5000)
+    # file = open("newoutput.txt", "w")
+    # # prediction = repr(predAsString)
+    # file.write(predAsString)
+    # file.close
+    return render_template("resultshtml.html", prediction=predAsString)

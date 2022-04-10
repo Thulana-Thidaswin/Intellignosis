@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/dashboard', (req, res) => {
-    res.render('dashboard');
+    res.render('dashboard', { name: req.user.name });
 })
 
 router.get('/AboutHTML', (req, res) => {
@@ -16,11 +16,13 @@ router.get('/AboutHTML', (req, res) => {
 })
 
 router.get('/AccountPreview', (req, res) => {
-    res.render('AccountPreview');
+    res.render('AccountPreview', { username: req.user.email, age: req.user.age, 
+        location: req.user.location, occupation: req.user.occupation, name: req.user.name},);
 })
 
 router.get('/AccountSettingsHTML', (req, res) => {
-    res.render('AccountSettingsHTML');
+    res.render('AccountSettingsHTML', { username: req.user.email, age: req.user.age, 
+        location: req.user.location, occupation: req.user.occupation, name: req.user.name},);
 })
 
 router.get('/AddressChangeHTML', (req, res) => {

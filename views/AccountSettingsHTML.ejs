@@ -147,7 +147,7 @@
 
     <div id="topDiv">
       <img src="/main-images/Arif.png" alt="ProfilePic" id="profilePic">
-      <h1 id="username">User Name</h1>
+      <h1 id="username"><%= name %></h1>
     </div>
 
    
@@ -157,24 +157,24 @@
       <table id="profileTable">
         <tr>
           <td>Email</td>
-          <td>Sample@email.com</td>
+          <td><%= username %></td>
           
         </tr>
         <tr>
           <td>Age</td>
-          <td>14</td>
+          <td><%= age %></td>
          
         </tr>
 
         <tr>
           <td>Location</td>
-          <td>Colombo, Sri Lanka</td>
+          <td><%= location %></td>
           
         </tr>
 
         <tr>
           <td>Occupation</td>
-          <td>Student</td>
+          <td><%= occupation %></td>
           
         </tr>
 

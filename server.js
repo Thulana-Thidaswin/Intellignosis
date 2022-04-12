@@ -1,7 +1,11 @@
+//Main Server File
+
+//Requires the config file
 if (process.env.NODE_ENV !== 'production') {
     require("dotenv").config()
 }
 
+//Importing modules and libraries
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
@@ -11,16 +15,14 @@ const passport = require('passport');
 const path = require('path');
 const upload = require('express-fileupload');
 
-//const indexRouter = require('./routes/index')
-//const userRouter = require('./routes/users')
 
 require('events').EventEmitter.prototype._maxListeners = 100;
 
-//passport stuff
+//Importing the passport and database configuration
 require('./config/passport')(passport);
 require('./models/User')(passport);
-//ejs
 
+//Ejs configuration
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -56,26 +58,28 @@ app.use((req, res, next) => {
 
 
 
-
+//Connect all the static files to server
 app.use(express.static('public'))
 
 
-
+//Connecting the database_
 const mongoose = require('mongoose')
 
-
-//const ldb = require('./config/keys').MongoURI;
-//mongoose.connect(ldb, { useNewURLParser: true })
-// .then(() => console.log("MongoDB Connected..."))
-// .catch(err => console.error(err))
+//Connects the local server to database
+const ldb = require('./config/keys').MongoURI;
+mongoose.connect(ldb, { useNewURLParser: true })
+.then(() => console.log("MongoDB Connected..."))
+.catch(err => console.error(err))
 
 // DONT REMOVE THIS BALLO
-//might wanna check this
-mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
-const db = mongoose.connection
-db.on('error', error => console.error(error))
-db.once('open', () => console.log('Connected to Mongoose'))
-
+//Used to connect heroku to Mongo
+// mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
+// const db = mongoose.connection
+// db.on('error', error => console.error(error))
+// db.once('open', () => console.log('Connected to Mongoose'))
+ 
+//DONT REMOVE THIS LINE
+//Connects the routes to server
 app.use('/', require('./routes/index')) 
 app.use('/users', require('./routes/users'))
 app.use('/', require('./routes/analyze'))

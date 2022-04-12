@@ -7,7 +7,7 @@ const User = require('../models/User');
 const flash = require('connect-flash');
 
 module.exports = function(passport) {
-    
+    //local strategy checks if the user exists in the database
     passport.use(
         new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
           // Match user
@@ -18,7 +18,7 @@ module.exports = function(passport) {
               return done(null, false, { message: 'That email is not registered' });
             }
     
-            // Match password
+            // Checks if the password is correct
             bcrypt.compare(password, user.password, (err, isMatch) => {
               if (err) throw err;
               if (isMatch) {
@@ -30,11 +30,11 @@ module.exports = function(passport) {
           });
         })
       );
-    //serializing the user and deserializing the user?
+    //serializing the user to store in the session
     passport.serializeUser((user, done) => {
         done(null, user.id);
     });
-    
+    //deserializing the user from the session
     passport.deserializeUser((id, done) => {
         User.findById(id, (err, user) =>  {
           done(err, user);

@@ -1,3 +1,4 @@
+
 function getParams() 
 {var idx = document.URL.indexOf('?'); 
 var params = new Array(); 
@@ -8,4 +9,3 @@ params[nameVal[0]] = nameVal[1];}}
 return params;}params = getParams(); 
 PatientName = unescape(params["patientName"]); 
 document.write("PatientName = " + PatientName + "<br>"); 
-</script> 

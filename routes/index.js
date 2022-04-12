@@ -29,6 +29,10 @@ router.get('/AddressChangeHTML', (req, res) => {
     res.render('AddressChangeHTML');
 })
 
+router.get('/passwordChangeHTML', (req, res) => {
+    res.render('passwordChangeHTML');
+})
+
 router.get('/AnalysisLoadingHTML', (req, res) => {
     res.render('AnalysisLoadingHTML');
 })

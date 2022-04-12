@@ -19,6 +19,8 @@ Team members:
 
 ## How to Install
 
-An installer will be implemented where it will contain a setup where within a few clicks of a button the application could be installed
+An installer will be implemented where it will contain a setup where within a few clicks of a button the application could be installed.
+                                                                        OR
+Use our website (https://intellignosis.herokuapp.com/)                                                                        
 
 

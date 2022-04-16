@@ -1,0 +1,1 @@
+setTimeout(() => {  window.location.href="/AccountSettingsHTML"; }, 3750);

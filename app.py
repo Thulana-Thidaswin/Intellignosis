@@ -16,10 +16,10 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 if __name__ == "__main__":
-    app.run(debug=True ,port=8080,use_reloader=False)
+    app.run(debug=True ,port=5000, use_reloader=False)
 
 
-@app.route("/")
+@app.route("/flask", methods=['GET'])
 def index():
     # Scientific packages
     list_of_files = glob.glob('Upload/*.edf')
@@ -78,7 +78,8 @@ def index():
         with pd.ExcelWriter(path = file_name, engine = 'openpyxl') as writer:
             bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
 
-    os.remove(latest_file)
+    #DONT FORGET TO UNCOMMENT THIS!!!!!!!!!!!111
+    # os.remove(latest_file)
 
     df = pd.read_excel("Tabulars/Absolute-bands.xlsx")
     betaFreqs = df["Beta"].tolist()
@@ -104,8 +105,10 @@ def index():
     # myStr = "HEyyyy"
     # print(predAsString+myStr)
 
-    # file = open("newoutput.txt", "w")
+    # file = open("static/newoutput.txt", "w")
     # # prediction = repr(predAsString)
     # file.write(predAsString)
+    # print(predAsString)
     # file.close
-    return render_template("resultshtml.html", prediction=predAsString)
+    # return render_template("resultshtml.html", prediction=predAsString)
+    return predAsString

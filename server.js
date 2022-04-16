@@ -21,11 +21,14 @@ require('./config/passport')(passport);
 require('./models/User')(passport);
 //ejs
 
+const globArr = [];
+
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(upload())
+
 //body parser
 app.use(express.urlencoded({ extend: false }));
 

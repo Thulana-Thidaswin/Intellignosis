@@ -1,7 +1,3 @@
-<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
-<!-- TODO: Glass texture to UI -->
-<!-- TODO: Visited style for side panel buttons -->
-<!-- TODO: Also discuss about the code repetition issue -->
 <!DOCTYPE html>
 <html>
 
@@ -75,7 +71,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="sidePanel">
     <!-- Don't make any changes to this panel  -->
@@ -97,12 +92,20 @@
 
    
     
-    <div class="upload-edf">
+    <!-- <div class="upload-edf">
       <form method="POST" action="/" enctype="multipart/form-data" >
         <input type="text" placeholder="Browse ."/>
         <input type="file" name="file" required/>
         <input type="submit" value="Analyze" href="{{ 'templates/resultshtml.html' }}"/>
         <!-- <button id="upload-button" class="analyzediv" onclick="uploadFile(this.form)">Analyze</button> -->
+      <!-- </form>
+    </div> -->
+
+    <div class="upload-edf">
+      <form method="POST" action="/analyze" enctype="multipart/form-data" >
+        <input type="text" placeholder="Browse ."/>
+        <input type="file" name="file" required/>
+        <input type="submit" value="Analyze"/>
       </form>
     </div>
 

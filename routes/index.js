@@ -31,8 +31,6 @@ router.get('/AnalysisLoadingHTML', (req, res) => {
     res.render('AnalysisLoadingHTML');
 })
 
-
-
 router.get('/BirthdatechangeHTML', (req, res) => {
     res.render('BirthdatechangeHTML');
 })
@@ -74,7 +72,6 @@ router.get('/ResultsScreenHTML', (req, res) => {
 router.get('/SettingsScreenHTML', (req, res) => {
     res.render('SettingsScreenHTML');
 })
-
 
 
 module.exports = router;

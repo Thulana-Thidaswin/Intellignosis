@@ -1,17 +1,12 @@
-<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
-<!-- TODO: Glass texture to UI -->
-<!-- TODO: Visited style for side panel buttons -->
-<!-- TODO: Also discuss about the code repetition issue -->
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
     <title>Intellignosis</title>
-    <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
-    <link rel="stylesheet" href="../index.css" />
+    <link rel="icon" src="{{ url_for('static', filename='main-images/ciruclarcroppedlogo_1WL_icon.ico') }}"/>
+    <link type="text/css" rel="stylesheet" src="{{ url_for('static', filename='main.css') }}"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
     <style type="text/css">
         /* This is the css tag for the main panel */
         .mainPanel {
@@ -123,9 +118,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="sidePanel">
         <!-- Don't make any changes to this panel  -->
         <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
@@ -138,58 +131,45 @@
         <span class="AboutText">
             <p>Intellignosis® version 1.0.0<br>
                 Trademark of Intellignosis<br> CAD, Sri Lanka</p>
-                <p>{{prediction}}</p>
         </span>
-
     </div>
-
     <div class="mainPanel">
-
         <div class="resultsSheet">
             <h2 class="mainHeading">
                 Major Depressive Disorder Intellignosis Report<br>
                 Automated evaluation
             </h2>
-
             <div id="details" class="patientDetails">
                 <p>
                     Date : 28 December 2021<br>
                     Patient Name : Thulana Thidaswin<br>
                     Patient Age : 20 years
                 </p>
+                
             </div>
-
             <hr>
-
-
             <section class="diagnosissection">
                 <h3>
                     Diagnosis :
                 </h3>
-
-
-                <div id="diagnosis">
-                    <p>
-                        The patient is suffering from <b>Moderate</b> Depression (BDI-II-20-28).
+                <div>
+                    <p id="diagnosis">
+                        Diagnosis statement
                     </p>
                 </div>
             </section>
-
-
             <section class="additionalNotes">
                 <h3>
                     Additional Notes :
                 </h3>
-
                 <p id="seekTherapy">
-                    <strong> A psychiatrist consultation is <b>highly</b> recommended.</strong>
+                    Therapy recommendation statement.
                 </p>
                 <p id="symptoms">
-                    The patient might show symptoms of insomnia, anxiety and possibly signs of self-harm.
+                    Symptoms statement.
                 </p>
             </section>
             <hr>
-
             <section class="bdinfo">
                 <p>
                     <b>Beck Depression Index</b><br>
@@ -200,18 +180,16 @@
                     29 - 63 : Severe
                 </p>
                 <section>
-
                     <section class="coolNote">
                         <p>
-                            Please keep in mind that this diagnosis is not a replacement for a clinician’s diagnosis and
+                            Please keep in mind that this diagnosis is not a replacement for a clinician's diagnosis and
                             it is not advised to solely rely on this <br>
                             application for your mental health. Visit a consellor or a psychiatrist to obtain proper
                             treatment.
                         </p>
                     </section>
-
-
-
+                </section>
+            </section>
         </div>
         <section class="buttonDiv">
             <button class="botButton">Print</button>
@@ -251,13 +229,54 @@
                 }
             }
         </script>
-
     </div>
     <script type="text/javascript" src="{{ url_for('static', filename='ResultsScreenJS.js') }}"></script>
 </body>
+<script>
+changeName();
+const pred_output = "{{prediction}}";
+const resultArray = ["The patient is suffering from <b>Minimal</b> Depression.",
+    "The patient is suffering from <b>Mild</b> Depression.",
+    "The patient is suffering from <b>Moderate</b> Depression.",
+    "The patient is suffering from <b>Severe</b> Depression."];
 
-<script>changeName();
-    changeResult();
+const suggestArray = ["A psychiatrist consultation is not necessary.",
+    "Consulting an understanding adult is highly recommended.",
+    "A psychiatrist consultation is recommended.",
+    "A psychiatrist consultation is highly necessary."];
+
+const symptomArray = ["The patient might show slight symptoms of moodiness or sleepiness",
+    "The patient might show symptoms of disinterest and loss of appetite in addition to feeling sleepy.",
+    "The patient might show symptoms of sudden mood changes as well as insomnia.",
+    "The patient might show suicidal behaviour as well as sudden mood changes and delusions."];
+
+const minimal = "[&#39;Minimal&#39;]";
+const mild = "[&#39;Mild&#39;]";
+const moderate = "[&#39;Moderate&#39;]";
+const severe = "[&#39;Severe&#39;]";
+
+window.onload = function(){
+    predFunction();
+    function predFunction(){
+        if (pred_output === minimal) {
+            document.getElementById("diagnosis").innerHTML = resultArray[0];
+            document.getElementById("seekTherapy").innerHTML = suggestArray[0];
+            document.getElementById("symptoms").innerHTML = symptomArray[0];
+        } else if (pred_output === mild) {
+            document.getElementById("diagnosis").innerHTML = resultArray[1];
+            document.getElementById("seekTherapy").innerHTML = suggestArray[1];
+            document.getElementById("symptoms").innerHTML = symptomArray[1];
+        } else if (pred_output === moderate) {
+            document.getElementById("diagnosis").innerHTML = resultArray[2];
+            document.getElementById("seekTherapy").innerHTML = suggestArray[2];
+            document.getElementById("symptoms").innerHTML = symptomArray[2];
+        } else if (pred_output === severe) {
+            document.getElementById("diagnosis").innerHTML = resultArray[3];
+            document.getElementById("seekTherapy").innerHTML = suggestArray[3];
+            document.getElementById("symptoms").innerHTML = symptomArray[3];
+        }
+    }
+}
 </script>
 
 </html>

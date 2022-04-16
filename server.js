@@ -66,17 +66,17 @@ app.use(express.static('public'))
 const mongoose = require('mongoose')
 
 //Connects the local server to database
-const ldb = require('./config/keys').MongoURI;
-mongoose.connect(ldb, { useNewURLParser: true })
-.then(() => console.log("MongoDB Connected..."))
-.catch(err => console.error(err))
+//const ldb = require('./config/keys').MongoURI;
+//mongoose.connect(ldb, { useNewURLParser: true })
+//.then(() => console.log("MongoDB Connected..."))
+//.catch(err => console.error(err))
 
 // DONT REMOVE THIS BALLO
 //Used to connect heroku to Mongo
-// mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
-// const db = mongoose.connection
-// db.on('error', error => console.error(error))
-// db.once('open', () => console.log('Connected to Mongoose'))
+mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
+const db = mongoose.connection
+db.on('error', error => console.error(error))
+db.once('open', () => console.log('Connected to Mongoose'))
  
 //DONT REMOVE THIS LINE
 //Connects the routes to server

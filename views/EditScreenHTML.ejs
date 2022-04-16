@@ -152,45 +152,35 @@
   </div>
   <div class="mainPanel">
     <a href="javascript:history.back()" id="gobacklink"><i class='bx bx-log-out-circle' ></i>&nbsp;&nbsp;Go back</a>
-
-    <div id="topDiv">
-      <img src="/main-images/Arif.png" alt="ProfilePic" id="profilePic">
-      <h1 id="username"><%= name %></h1>
-    </div>
-
-   
-    <hr>
-
-    <div>
-      <table id="profileTable">
-        <tr>
-          <td>Email</td>
-          <td><%= username %></td>
-          
-        </tr>
-        <tr>
-          <td>Age</td>
-          <td><%= age %></td>
-         
-        </tr>
-
-        <tr>
-          <td>Location</td>
-          <td><%= location %></td>
-          
-        </tr>
-
-        <tr>
-          <td>Occupation</td>
-          <td><%= occupation %></td>
-          
-        </tr>
-
-        
-      </table>
-    </div>
     
-    <button id = "btn" onclick="window.location.href='/EditScreenHTML?id=<%= id %>'" >Edit</button>
+   
+
+    <form action "" method="post" enctype="multipart/form-data">
+        
+        <br>
+
+        <input type="hidden" name="user_id" value="<%= id %>">
+
+        <input type="text" name="name" value="<%= name%>" placeholder="Enter Name" required>
+        <br>
+
+        <input type="text" name="email" value="<%= username%>" placeholder="Enter Email" required>
+        <br>
+
+        <input type="text" name="age" value="<%= age%>" placeholder="Enter Age" required>
+        <br>
+
+        <input type="text" name="location" value="<%= location%>" placeholder="Enter location" >
+        <br>
+
+        <input type="text" name="occupation" value="<%= occupation%>" placeholder="Enter Occupation" >
+        <br>
+
+        <input type="submit" value="Update Profile">
+
+    </form>
+    
+    
     
     
     

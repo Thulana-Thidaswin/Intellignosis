@@ -63,7 +63,7 @@ app.use(express.static('public'))
 
 
 //Connecting the database_
-//const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
 //Connects the local server to database
 //const ldb = require('./config/keys').MongoURI;

@@ -43,11 +43,7 @@
       
     }
     
-    #username {
-      width: 70%;
-      float: right;
-      margin-top:125px 
-    }
+    
 
     #topDiv{
       
@@ -129,6 +125,51 @@
       padding: 16px 32px;
     }
 
+    .RightDiv {
+      margin-top: 40px;
+      padding: 50px 200px 20px 200px;
+    }
+
+    .RightDiv label {
+      float: left;
+      font-size: 18px;
+    }
+
+    .RightDiv input {
+      float: right;
+    }
+
+    
+
+    .EditInput {
+      font-size: large;
+      border: none;
+      border-bottom: 2px solid black;
+      
+      
+    }
+
+    .btn {
+      font-size: x-large;
+      background-color: black;
+      color: white;
+      margin-top: 1%;
+      width: 30%;
+      border-radius: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+   
+    }
+
+    .btn:hover{
+      background-color: white;
+      color: black;
+    }
+
+    .btn:active{
+      background-color: gray;
+      color: black;
+    }
    
   </style>
 
@@ -155,30 +196,48 @@
     
    
 
+   <div class="RightDiv">
     <form action "" method="post" enctype="multipart/form-data">
         
-        <br>
+      <br>
+      
+      <input type="hidden" name="user_id" value="<%= id %>">
+      
+      <label for="name">Name:</label>
+      <input class="EditInput" type="text" name="name" value="<%= name%>" placeholder="Enter Name" required>
+      <br>
+      <br>
+      
+      <label for="name">Email:</label>
+      <input class="EditInput" type="text" name="email" value="<%= username%>" placeholder="Enter Email" required>
+      <br>
+      <br>
 
-        <input type="hidden" name="user_id" value="<%= id %>">
+      <label for="name">Age:</label>
+      <input class="EditInput" type="text" name="age" value="<%= age%>" placeholder="Enter Age" required>
+      <br>
+      <br>
 
-        <input type="text" name="name" value="<%= name%>" placeholder="Enter Name" required>
-        <br>
+      <label for="name">Location:</label>
+      <input class="EditInput" type="text" name="location" value="<%= location%>" placeholder="Enter location" >
+      <br>
+      <br>
 
-        <input type="text" name="email" value="<%= username%>" placeholder="Enter Email" required>
-        <br>
+      <label for="name">Occupation:</label>
+      <input class="EditInput" type="text" name="occupation" value="<%= occupation%>" placeholder="Enter Occupation" >
+      <br>
+      <br>
 
-        <input type="text" name="age" value="<%= age%>" placeholder="Enter Age" required>
-        <br>
+      <br>
+      <button class="btn" type="submit" value="Update Profile">Update Profile</button>
 
-        <input type="text" name="location" value="<%= location%>" placeholder="Enter location" >
-        <br>
 
-        <input type="text" name="occupation" value="<%= occupation%>" placeholder="Enter Occupation" >
-        <br>
-
-        <input type="submit" value="Update Profile">
+      
 
     </form>
+   </div>
+
+    
     
     
     

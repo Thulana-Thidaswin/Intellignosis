@@ -60,6 +60,34 @@
     .upload-edf{
         margin-top: 200px;
     }
+
+    .fileInput {
+      font-size: large;
+      border: none;
+      border-bottom: 2px solid black;
+    }
+
+    .btn {
+      font-size: x-large;
+      background-color: black;
+      color: white;
+      margin-top: 1%;
+      width: 30%;
+      border-radius: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+   
+    }
+
+    .btn:hover{
+      background-color: white;
+      color: black;
+    }
+
+    .btn:active{
+      background-color: gray;
+      color: black;
+    }
     
   </style>
 </head>
@@ -87,10 +115,10 @@
     
     <div class="upload-edf">
       <form method="POST" action="/" enctype="multipart/form-data" >
-      <input type="text" placeholder="Browse ."/>
+      <input class="fileInput" type="text" placeholder="Browse..."/>
       <input type="file" name="file" required/>
       <br> <br>
-      <div class="analyzediv" input type="submit" accept=".edf" value="Analyze" onclick="window.location.href='/views/AnalysisLoadingHTML.html'">Analyze</div>
+      <button class="btn" class="analyzediv" input type="submit" accept=".edf" value="Analyze" onclick="window.location.href='/views/AnalysisLoadingHTML.html'">Analyze</button>
         <!-- <button id="upload-button" class="analyzediv" onclick="uploadFile(this.form)">Analyze</button> -->
       </form>
     </div>

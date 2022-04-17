@@ -15,11 +15,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-if __name__ == "__main__":
-    app.run(debug=True ,port=5000, use_reloader=False)
 
-
-@app.route("/flask", methods=['GET'])
+@app.route("/flask/", methods=['GET'])
 def index():
     # Scientific packages
     list_of_files = glob.glob('Upload/*.edf')
@@ -79,7 +76,7 @@ def index():
             bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
 
     #DONT FORGET TO UNCOMMENT THIS!!!!!!!!!!!111
-    # os.remove(latest_file)
+    os.remove(latest_file)
 
     df = pd.read_excel("Tabulars/Absolute-bands.xlsx")
     betaFreqs = df["Beta"].tolist()
@@ -93,7 +90,7 @@ def index():
 
     prediction = model.predict(convertedArr)
 
-    os.remove("Tabulars/Absolute-bands.xlsx")
+    # os.remove("Tabulars/Absolute-bands.xlsx")
 
     print(prediction)
 
@@ -111,4 +108,8 @@ def index():
     # print(predAsString)
     # file.close
     # return render_template("resultshtml.html", prediction=predAsString)
+    print(predAsString)
     return predAsString
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000, use_reloader=False)

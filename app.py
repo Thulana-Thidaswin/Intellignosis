@@ -33,7 +33,7 @@ def index():
     sf = raw.info['sfreq']
     chan = raw.ch_names
 
-    rawC4 =raw.pick_channels(['EEG C3-LE' ])
+    rawC4 = raw.pick_channels(['EEG C3-LE' ])
 
     # Extract the data and convert from V to uV
     dataC4 = rawC4._data * 1e6
@@ -53,6 +53,7 @@ def index():
     psd1 = psd1.reshape(513)
 
     # Absolute power, using different bands
+    #Changed Gamma to THEta here!
     bp = yasa.bandpower_from_psd(psd1, freqs1, ch_names=chanC4, bands=[(13,22,'Beta'),(22, 40, 'Gamma')], relative=False)
 
     # Create a Numpy Array of integers
@@ -79,18 +80,20 @@ def index():
     os.remove(latest_file)
 
     df = pd.read_excel("Tabulars/Absolute-bands.xlsx")
-    betaFreqs = df["Beta"].tolist()
-    gammaFreqs = df["Gamma"].tolist()
-    allFreqs = betaFreqs + gammaFreqs
+    # betaFreqs = df["Beta"].tolist()
+    # gammaFreqs = df["Gamma"].tolist()
+    # allFreqs = betaFreqs + gammaFreqs
 
-    convertedArr = np.reshape(betaFreqs, (-1, 1))
-    print(convertedArr)
+    x_data = df[["Beta", "Gamma"]]
+    print("XDATA: ", x_data)
 
-    model = pickle.load(open("model.pk1", "rb"))
 
-    prediction = model.predict(convertedArr)
+    # convertedArr = np.reshape(betaFreqs, (-1, 1))
+    # print(convertedArr)
+    model = pickle.load(open("newModel.pk1", "rb"))
+    prediction = model.predict(x_data)
 
-    # os.remove("Tabulars/Absolute-bands.xlsx")
+    os.remove("Tabulars/Absolute-bands.xlsx")
 
     print(prediction)
 
@@ -109,6 +112,8 @@ def index():
     # file.close
     # return render_template("resultshtml.html", prediction=predAsString)
     print(predAsString)
+    # randVar = "['Minimal']" 
+    # print(randVar)
     return predAsString
 
 if __name__ == "__main__":

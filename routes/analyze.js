@@ -48,16 +48,16 @@ router.post('/analyze', (req, res)=>{
     // console.log(JSON.parse(response.data))
     console.log("Flask is responding")
     var services = response.data
-    services = services .split(",");
-    services [0] = services [0].substring(1);
-    services [services .length - 1] = services [services .length - 1].substring(
-      0,
-      services [services .length - 1].length - 1
-    );
-    services .forEach((x, i) => {
-      services [i] = services [i].includes('"') ? services [i].replaceAll('"', "").trim()
-        : services [i].replaceAll("'", "").trim();
-    });
+    // services = services .split(",");
+    // services [0] = services [0].substring(1);
+    // services [services .length - 1] = services [services .length - 1].substring(
+    //   0,
+    //   services [services .length - 1].length - 1
+    // );
+    // services .forEach((x, i) => {
+    //   services [i] = services [i].includes('"') ? services [i].replaceAll('"', "").trim()
+    //     : services [i].replaceAll("'", "").trim();
+    // });
 
     res.redirect(`/ResultsScreenHTML?data=${services}`)
   }, (error) => { 

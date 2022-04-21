@@ -1,24 +1,28 @@
 {
-  "name": "newproject",
+  "name": "intellignosis",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "An application to detect depression though EEG Waves",
+  "main": "src/index.js",
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "electronStart": "electron ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Thulana Thidaswin",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.1",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "ejs": "^3.1.6",
+    "electron-squirrel-startup": "^1.0.0",
     "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.1",
     "express-fileupload": "^1.3.1",
     "express-session": "^1.17.2",
     "fs": "^0.0.1-security",
+
     "mongoose": "^6.2.10",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
@@ -28,6 +32,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
+    "electron": "^18.1.0",
     "nodemon": "^2.0.15"
   },
   "repository": {
@@ -37,6 +42,6 @@
   "bugs": {
     "url": "https://github.com/Thulana-Thidaswin/Intellignosis/issues"
   },
-  "homepage": "https://github.com/Thulana-Thidaswin/Intellignosis#readme",
-  "description": ""
+
+  "homepage": "https://github.com/Thulana-Thidaswin/Intellignosis#readme"
 }

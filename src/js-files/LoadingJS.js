@@ -1,0 +1,1 @@
+setTimeout(() => {  window.location.href="WelcomeHTML.html"; }, 3750);

@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
     require("dotenv").config()
 }
 
+//Importing modules and libraries
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
@@ -33,9 +34,9 @@ app.use(express.urlencoded({ extend: false }));
 app.use(
     //bruv what does this do?!
     session({
-      secret: 'secret',
-      resave: true,
-      saveUninitialized: true
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
     })
 );
 
@@ -66,19 +67,18 @@ const mongoose = require('mongoose')
 //Connects the local server to database
 const ldb = require('./config/keys').MongoURI;
 mongoose.connect(ldb, { useNewURLParser: true })
- .then(() => console.log("MongoDB Connected..."))
- .catch(err => console.error(err))
+    .then(() => console.log("MongoDB Connected..."))
+    .catch(err => console.error(err))
 
-// DONT REMOVE THIS BALLO
-//might wanna check this
-//mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
-//const db = mongoose.connection
-//db.on('error', error => console.error(error))
-//db.once('open', () => console.log('Connected to Mongoose'))
+//Used to connect heroku to Mongo
+// mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
+// const db = mongoose.connection
+// db.on('error', error => console.error(error))
+// db.once('open', () => console.log('Connected to Mongoose'))
 
 //DONT REMOVE THIS LINE
 //Connects the routes to server
-app.use('/', require('./routes/index')) 
+app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
 app.use('/', require('./routes/analyze'))
 

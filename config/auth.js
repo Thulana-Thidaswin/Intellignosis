@@ -7,3 +7,5 @@ module.exports = {
         req.redirect('/users/login');
     }
 }
+
+// If User tries to access a page/ URL which is not available to him/her, then he/she will be redirected to the login page.

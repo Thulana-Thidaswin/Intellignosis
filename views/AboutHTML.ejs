@@ -8,10 +8,15 @@
 	<link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
 	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 	<style type="text/css">
-		html,
 		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			margin: auto;
+			max-width: 38rem;
+			background-color: #fffafa;
+			text-align: center;
 			max-width: 100%;
 		}
+
 
 		body {
 			margin: 0;
@@ -30,42 +35,49 @@
 			padding: 15px 0;
 		}
 
-		.personalInfoLayout {
-			display: grid;
-			width: 50%;
-			grid-template-columns: 65% 35%;
-			grid-template-rows: auto;
-			margin-left: 10%;
+		.image_details {
+
+			position: relative;
+			width: 20%;
+			float: right;
 		}
 
-		th,
-		td {
-			text-align: left;
-			padding: 0 25px;
+		.image1_details {
+
+			display: block;
+			height: 270px;
+			width: 250px;
+
+
 		}
 
-		table {
-			margin: auto;
+		.image_overlay_details {
+			bottom: 0;
+			padding: 20px;
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			top: 0;
+			left: 0;
+			width: 85%;
+			height: 85%;
+			position: absolute;
+			opacity: 0;
+			transition: opacity 0.5s;
+			text-align: center;
+
 		}
 
-		table.infoTable {
-			margin: 0;
+		.image_overlay_details:hover {
+
+			opacity: 0.5;
 		}
 
-		table.infoTable .col1 {
-			width: 80px;
-			background-color: rgba(48, 48, 48, 0.22);
-		}
+		.title_details {
 
-		table.tasks .col1 {
-			background-color: rgba(0, 0, 0, 0.12);
-			width: 100px;
-		}
-
-		.Img {
-			width: 500px;
-			height: 300px;
-			margin: auto;
+			font-size: 1.3em;
+			font-weight: bold;
+			position: middle;
+			margin: 20%;
 		}
 
 		.container {
@@ -102,66 +114,85 @@
 		</span>
 	</div>
 	<div class="mainPanel">
-		<a href="javascript:history.back()" id="gobacklink" <i class='bx bx-log-out-circle'></i></i>&nbsp;&nbsp;Go
+		<a href="javascript:history.back()" id="gobacklink" class='bx bx-log-out-circle'></i></i>&nbsp;&nbsp;Go
 			back</a>
 
 		<h1 class="title"><strong>ABOUT US</strong></h1>
 
 		<br>
-		<div class="personalInfoLayout">
-			<!--personal info table-->
-			<table class="infoTable">
-				<tr>
-					<td class="col1">
-						<p class="regular">Harees Srinivasan</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="col1">
-						<p class="regular">Thulana Thidaswin</p>
-					</td>
-				</tr>
+		<div>
+			<br>
+			<hr>
+			<div class="image_details">
+				<img class="image1_details" src="/main-images/arif.png" alt="A picture of a student">
+				<div class="image_overlay_details">
+					<div class="title_details">Arif Zahir</div>
 
-				<tr>
-					<td class="col1">
-						<p class="regular">Saad Moheedin</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="col1">
-						<p class="regular">Arif Zahir</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="col1">
-						<p class="regular">Sandali Siriwardana</p>
-					</td>
-				</tr>
-			</table>
-			<div class="container">
-				<img src="../main-images/abt.png" class="Img">
-				<div class="centered"> We are group of five and we created this application to help people out there who
-					are struggling with this depression.</div>
+				</div>
 			</div>
+
+			<div class="image_details">
+				<img class="image1_details" src="/main-images/thu.jpeg" alt="A picture of a student">
+				<div class="image_overlay_details">
+					<div class="title_details">Thulana Thidaswin</div>
+
+				</div>
+			</div>
+
+			<div class="image_details">
+				<img class="image1_details" src="/main-images/sad.jpeg" alt="A picture of a stu">
+				<div class="image_overlay_details">
+					<div class="title_details">Saad Mohideen</div>
+
+					
+				</div>
+			</div>
+
+			<div class="image_details">
+				<img class="image1_details" src="/main-images/hare.jpeg" alt="A picture of a student">
+				<div class="image_overlay_details">
+					<div class="title_details">Harees Srinivasan</div>
+
+				</div>
+			</div>
+
+			<div class="image_details">
+				<img class="image1_details" src="../main-images/final.jpeg" alt="A picture of a student">
+				<div class="image_overlay_details">
+					<div class="title_details">Sandali Siriwardana</div>
+
+				</div>
+			</div>
+            
+			<div class="container">
+				
+				<p> We are group of five and we created this application to help people out there who are struggling
+					with this depression.</p>
+			</div>
+
 		</div>
-		<script>
-			window.addEventListener('mouseover', initLandbot, { once: true });
-			window.addEventListener('touchstart', initLandbot, { once: true });
-			var myLandbot;
-			function initLandbot() {
-				if (!myLandbot) {
-					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-					s.addEventListener('load', function () {
-						var myLandbot = new Landbot.Livechat({
-							configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
-						});
+	</div>
+	</div>
+
+	</div>
+	<script>
+		window.addEventListener('mouseover', initLandbot, { once: true });
+		window.addEventListener('touchstart', initLandbot, { once: true });
+		var myLandbot;
+		function initLandbot() {
+			if (!myLandbot) {
+				var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+				s.addEventListener('load', function () {
+					var myLandbot = new Landbot.Livechat({
+						configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
 					});
-					s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-					var x = document.getElementsByTagName('script')[0];
-					x.parentNode.insertBefore(s, x);
-				}
+				});
+				s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+				var x = document.getElementsByTagName('script')[0];
+				x.parentNode.insertBefore(s, x);
 			}
-		</script>
+		}
+	</script>
 	</div>
 </body>
 

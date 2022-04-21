@@ -9,6 +9,16 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <style type="text/css">
         /* This is the css tag for the main panel */
+
+        body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			margin: auto;
+			max-width: 38rem;
+			background-color: #fffafa;
+			text-align: center;
+			max-width: 100%;
+		}
+
         .mainPanel {
             position: absolute;
             right: 0px;
@@ -85,37 +95,14 @@
             padding: 10px 50px 10px 50px;
             margin: 15px 7px 15px 30px;
             cursor: pointer;
+            transition-duration: 0.4s;
+            border-radius: 20px;
         }
 
         .botButton:hover {
             background-color: #D3D3D3;
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: black;
-            min-width: 160px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            right: 0;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: rgba(255, 255, 255, 0.664);
-        }
-
-        .show {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -134,7 +121,7 @@
         </span>
     </div>
     <div class="mainPanel">
-        <div class="resultsSheet">
+        <div class="resultsSheet" id="resultsSheetId">
             <h2 class="mainHeading">
                 Major Depressive Disorder Intellignosis Report<br>
                 Automated evaluation
@@ -192,16 +179,7 @@
             </section>
         </div>
         <section class="buttonDiv">
-            <button class="botButton">Print</button>
-            <!--get the fa icon to act as a link too
-            auto scroll down when drop down menu is clicked-->
-            <button onclick="dropDownMenu()" class="botButton dropbtn">Export to <i
-                    class="fas fa-chevron-down"></i></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#home">PDF</a>
-                <a href="#about">Word Doc</a>
-                <a href="#contact">Email</a>
-            </div>
+            <button class="botButton" onClick="printPageArea('resultsSheetId')">Print or Save</button>
         </section>
 
         <!-- GIT STUFF -->
@@ -287,6 +265,16 @@ window.onload = function(){
             document.getElementById("symptoms").innerHTML = symptomArray[3];
         }
     }
+}
+
+function printPageArea(resultsSheetId){
+    var printContent = document.getElementById(resultsSheetId);
+    var WinPrint = window.open('', '', 'width=900,height=650');
+    WinPrint.document.write(printContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.focus();
+    WinPrint.print();
+    WinPrint.close();
 }
 </script>
 

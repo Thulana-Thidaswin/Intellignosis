@@ -1,0 +1,262 @@
+<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
+<!-- TODO: Glass texture to UI -->
+<!-- TODO: Visited style for side panel buttons -->
+<!-- TODO: Also discuss about the code repetition issue -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Intellignosis</title>
+    <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
+    <link rel="stylesheet" href="../index.css" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <style type="text/css">
+        /* This is the css tag for the main panel */
+        .mainPanel {
+            position: absolute;
+            right: 0px;
+            float: right;
+            width: 80%;
+            background-color: #d1d1d1;
+            height: 100%;
+            text-align: left;
+            /* Add your css styles for the main panel here */
+        }
+
+        #gobacklink {
+            /*background-color: #806c6c;*/
+            font-size: 15px;
+            text-decoration: none;
+            border-style: none;
+            color: rgb(0, 0, 0);
+            padding: 7px 35px 7px 35px;
+            /*margin: 15px 7px 15px 30px;*/
+        }
+
+        #gobacklink:hover {
+            background-color: black;
+        }
+
+        .resultsSheet {
+            background-color: white;
+            padding-left: 20px;
+            width: 92%;
+            height: 85%;
+            overflow-y: scroll;
+            margin-top: 0.5%;
+        }
+
+        .mainHeading {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .patientDetails {
+            padding-bottom: 15px;
+        }
+
+        .diagnosissection {
+            padding-bottom: 30px;
+        }
+
+        .additionalNotes {
+
+            padding-bottom: 30px;
+        }
+
+        .bdinfo {
+            padding-top: 3px;
+        }
+
+        .coolNote {
+            padding-top: 7px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .buttonDiv {
+            float: right;
+            padding-right: 50px;
+        }
+
+        .botButton {
+            background-color: black;
+            font-size: 20px;
+            text-decoration: none;
+            border-style: none;
+            color: white;
+            padding: 10px 50px 10px 50px;
+            margin: 15px 7px 15px 30px;
+            cursor: pointer;
+        }
+
+        .botButton:hover {
+            background-color: #D3D3D3;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            right: 0;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.664);
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidePanel">
+        <!-- Don't make any changes to this panel  -->
+        <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+        <div class="spbtnpanel">
+            <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i class='bx bxs-home'></i></i>&nbsp;&nbsp;Dashboard</button><br>
+            <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i class='bx bx-glasses'></i>&nbsp;&nbsp;Analyze</button><br>
+            <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i class='bx bx-cog' ></i>&nbsp;&nbsp;Settings</button><br>
+            <button type="button" class="spbtn" onclick="window.location.href= '/users/logout'" ><i class='bx bx-log-out' ></i></i>&nbsp;&nbsp;Logout</button>
+          </div>
+        <span class="AboutText">
+            <p>Intellignosis® version 1.0.0<br>
+                Trademark of Intellignosis<br> CAD, Sri Lanka</p>
+        </span>
+
+    </div>
+
+    <div class="mainPanel">
+
+        <div class="resultsSheet">
+            <h2 class="mainHeading">
+                Major Depressive Disorder Intellignosis Report<br>
+                Automated evaluation
+            </h2>
+
+            <div id="details" class="patientDetails">
+                <p>
+                    Date : 28 December 2021<br>
+                    Patient Name : Thulana Thidaswin<br>
+                    Patient Age : 20 years
+                </p>
+            </div>
+
+            <hr>
+
+
+            <section class="diagnosissection">
+                <h3>
+                    Diagnosis :
+                </h3>
+
+
+                <div id="diagnosis">
+                    <p>
+                        The patient is suffering from <b>Moderate</b> Depression (BDI-II-20-28).
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="additionalNotes">
+                <h3>
+                    Additional Notes :
+                </h3>
+
+                <p id="seekTherapy">
+                    <strong> A psychiatrist consultation is <b>highly</b> recommended.</strong>
+                </p>
+                <p id="symptoms">
+                    The patient might show symptoms of insomnia, anxiety and possibly signs of self-harm.
+                </p>
+            </section>
+            <hr>
+
+            <section class="bdinfo">
+                <p>
+                    <b>Beck Depression Index</b><br>
+                    <br>
+                    0 - 13 : Minimal<br>
+                    14 - 19 : Mild<br>
+                    20 - 28 : Moderate<br>
+                    29 - 63 : Severe
+                </p>
+                <section>
+
+                    <section class="coolNote">
+                        <p>
+                            Please keep in mind that this diagnosis is not a replacement for a clinician’s diagnosis and
+                            it is not advised to solely rely on this <br>
+                            application for your mental health. Visit a consellor or a psychiatrist to obtain proper
+                            treatment.
+                        </p>
+                    </section>
+
+
+
+        </div>
+        <section class="buttonDiv">
+            <button class="botButton">Print</button>
+            <!--get the fa icon to act as a link too
+            auto scroll down when drop down menu is clicked-->
+            <button onclick="dropDownMenu()" class="botButton dropbtn">Export to <i
+                    class="fas fa-chevron-down"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">PDF</a>
+                <a href="#about">Word Doc</a>
+                <a href="#contact">Email</a>
+            </div>
+        </section>
+
+        <!-- GIT STUFF -->
+        <!-- You have cloned this file into your local repo
+      Before you commit or push this make sure you have created a new branch with the relevant screen name
+      Don't merge this branch into the main branch -->
+    </div>
+
+    <div>
+        <script>
+            window.addEventListener('mouseover', initLandbot, { once: true });
+            window.addEventListener('touchstart', initLandbot, { once: true });
+            var myLandbot;
+            function initLandbot() {
+                if (!myLandbot) {
+                    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                    s.addEventListener('load', function () {
+                        var myLandbot = new Landbot.Livechat({
+                            configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+                        });
+                    });
+                    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                    var x = document.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                }
+            }
+        </script>
+
+    </div>>
+
+</body>
+
+<script>changeName();
+    changeResult();
+</script>
+
+</html>

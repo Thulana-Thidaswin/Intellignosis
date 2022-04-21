@@ -1,0 +1,221 @@
+<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
+<!-- TODO: Glass texture to UI -->
+<!-- TODO: Visited style for side panel buttons -->
+<!-- TODO: Also discuss about the code repetition issue -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Intellignosis</title>
+  <link rel="icon" href="/main-images/ciruclarcroppedlogo_1WL_icon.ico">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+  <style type="text/css">
+    body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			margin: auto;
+			max-width: 38rem;
+			background-color: #fffafa;
+			text-align: center;
+		}
+
+    #profilePic {
+      margin: 80px 0px 20px 80px;
+      opacity: 1;
+      display: block;
+      width: 15%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      float: left;
+
+
+    }
+
+    #username {
+      width: 70%;
+      float: right;
+      margin-top: 125px
+    }
+
+    #topDiv {
+
+      height: 42%;
+    }
+
+    #gobacklink {
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    #profileTable {
+      width: 100%;
+    }
+
+    #profileTable,
+    td {
+
+      border: none;
+      border-collapse: collapse;
+      padding: 15px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #7B7780;
+    }
+
+    #btn {
+      font-size: x-large;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      margin-top: 1%;
+      width: 10%;
+      border-radius: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 20%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    .container {
+      width: 50%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .container:hover .image {
+      opacity: 0.3;
+    }
+
+    .container:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      background-color: grey;
+      color: white;
+      font-size: 20px;
+      padding: 16px 32px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="sidePanel">
+    <!-- Don't make any changes to this panel  -->
+    <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+    <div class="spbtnpanel">
+      <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i
+          class='bx bxs-home'></i></i>&nbsp;&nbsp;Dashboard</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i
+          class='bx bx-glasses'></i>&nbsp;&nbsp;Analyze</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i
+          class='bx bx-cog'></i>&nbsp;&nbsp;Settings</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href= '/users/logout'"><i
+          class='bx bx-log-out'></i></i>&nbsp;&nbsp;Logout</button>
+    </div>
+    <span class="AboutText">
+      <p>Intellignosis® version 1.0.0<br>
+        Trademark of Intellignosis<br> CAD, Sri Lanka</p>
+    </span>
+  </div>
+  <div class="mainPanel">
+    <a href="javascript:history.back()" id="gobacklink"><i class='bx bx-log-out-circle'></i>&nbsp;&nbsp;Go back</a>
+
+    <div id="topDiv">
+
+      <h1 id="username"><%= name %></h1>
+    </div>
+
+
+    <hr>
+
+    <div>
+      <table id="profileTable">
+        <tr>
+          <td>Email</td>
+          <td><%= username %></td>
+
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td><%= age %></td>
+
+        </tr>
+
+        <tr>
+          <td>Location</td>
+          <td><%= location %></td>
+
+        </tr>
+
+        <tr>
+          <td>Occupation</td>
+          <td><%= occupation %></td>
+
+        </tr>
+
+
+      </table>
+    </div>
+
+
+
+
+
+
+    <script>
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+          s.addEventListener('load', function () {
+            var myLandbot = new Landbot.Livechat({
+              configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+    </script>
+  </div>
+</body>
+
+</html>

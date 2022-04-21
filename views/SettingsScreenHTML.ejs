@@ -1,0 +1,107 @@
+<!-- TODO: When the screen becomes small change the left menu into a hamburger menu -->
+<!-- TODO: Glass texture to UI -->
+<!-- TODO: Visited style for side panel buttons -->
+<!-- TODO: Also discuss about the code repetition issue -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Intellignosis</title>
+  <link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <style type="text/css">
+    body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			margin: auto;
+			max-width: 38rem;
+			background-color: #fffafa;
+			text-align: center;
+			max-width: 100%;
+		}
+
+    #gobacklink {
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    .sett {
+      background-color: #d1d1d1;
+      color: black;
+      font-size: 25px;
+      padding: 30px;
+      margin: 150px 100px 2px 80px;
+      border-radius: 20px;
+      border: none;
+      width: 80%;
+      transition-duration: 0.4s;
+    }
+
+    .sett:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .settb {
+      margin-top: 15px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="sidePanel">
+    <!-- Don't make any changes to this panel  -->
+    <img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
+    <div class="spbtnpanel">
+      <button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i class='bx bxs-home'></i></i>&nbsp;&nbsp;Dashboard</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i class='bx bx-glasses'></i>&nbsp;&nbsp;Analyze</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i class='bx bx-cog' ></i>&nbsp;&nbsp;Settings</button><br>
+      <button type="button" class="spbtn" onclick="window.location.href= '/users/logout'" ><i class='bx bx-log-out' ></i></i>&nbsp;&nbsp;Logout</button>
+    </div>
+    <span class="AboutText">
+      <p>Intellignosis® version 1.0.0<br>
+        Trademark of Intellignosis<br> CAD, Sri Lanka</p>
+    </span>
+  </div>
+  <div class="mainPanel">
+    <a href="javascript:history.back()" id="gobacklink"><i class='bx bx-log-out-circle' ></i></i>&nbsp;&nbsp;Go back</a>
+    <div class="settb">
+      <table>
+        <tr>
+          <button class="sett" onclick="window.location.href='/AccountSettingsHTML'"><i class="fa fa-gear"
+              style="font-size:28px; font-family:Helvetica;">Account Settings</button></i>
+          <button class="sett" onclick="window.location.href='/AboutHTML'"><i class="fas fa-edit"
+              style="font-size:28px; font-family:Helvetica;">About Intellignosis</button></i>
+        </tr>
+
+      </table>
+    </div>
+    <script>
+			window.addEventListener('mouseover', initLandbot, { once: true });
+			window.addEventListener('touchstart', initLandbot, { once: true });
+			var myLandbot;
+			function initLandbot() {
+				if (!myLandbot) {
+					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+					s.addEventListener('load', function () {
+						var myLandbot = new Landbot.Livechat({
+							configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
+						});
+					});
+					s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+					var x = document.getElementsByTagName('script')[0];
+					x.parentNode.insertBefore(s, x);
+				}
+			}
+		</script>
+
+  </div>
+</body>
+
+</html>

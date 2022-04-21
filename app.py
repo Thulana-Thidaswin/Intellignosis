@@ -33,7 +33,7 @@ def index():
     sf = raw.info['sfreq']
     chan = raw.ch_names
 
-    rawC4 = raw.pick_channels(['EEG C3-LE' ])
+    rawC4 = raw.pick_channels(['EEG Fp1-LE' ])
 
     # Extract the data and convert from V to uV
     dataC4 = rawC4._data * 1e6
@@ -90,7 +90,7 @@ def index():
 
     # convertedArr = np.reshape(betaFreqs, (-1, 1))
     # print(convertedArr)
-    model = pickle.load(open("newModel.pk1", "rb"))
+    model = pickle.load(open("kNNModel.pk1", "rb"))
     prediction = model.predict(x_data)
 
     os.remove("Tabulars/Absolute-bands.xlsx")

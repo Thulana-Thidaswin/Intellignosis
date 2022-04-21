@@ -93,7 +93,7 @@ def index():
     model = pickle.load(open("kNNModel.pk1", "rb"))
     prediction = model.predict(x_data)
 
-    os.remove("Tabulars/Absolute-bands.xlsx")
+    # os.remove("Tabulars/Absolute-bands.xlsx")
 
     print(prediction)
 

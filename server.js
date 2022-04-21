@@ -1,3 +1,6 @@
+//Main Server File
+
+//Requires the config file
 if (process.env.NODE_ENV !== 'production') {
     require("dotenv").config()
 }
@@ -11,24 +14,18 @@ const passport = require('passport');
 const path = require('path');
 const upload = require('express-fileupload');
 
-//const indexRouter = require('./routes/index')
-//const userRouter = require('./routes/users')
-
 require('events').EventEmitter.prototype._maxListeners = 100;
 
-//passport stuff
+//Importing the passport and database configuration
 require('./config/passport')(passport);
 require('./models/User')(passport);
-//ejs
 
-const globArr = [];
-
+//Ejs configuration
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(upload())
-
 //body parser
 app.use(express.urlencoded({ extend: false }));
 
@@ -59,14 +56,14 @@ app.use((req, res, next) => {
 
 
 
-
+//Connect all the static files to server
 app.use(express.static('public'))
 
 
-
+//Connecting the database_
 const mongoose = require('mongoose')
 
-
+//Connects the local server to database
 const ldb = require('./config/keys').MongoURI;
 mongoose.connect(ldb, { useNewURLParser: true })
  .then(() => console.log("MongoDB Connected..."))
@@ -79,11 +76,11 @@ mongoose.connect(ldb, { useNewURLParser: true })
 //db.on('error', error => console.error(error))
 //db.once('open', () => console.log('Connected to Mongoose'))
 
+//DONT REMOVE THIS LINE
+//Connects the routes to server
 app.use('/', require('./routes/index')) 
 app.use('/users', require('./routes/users'))
 app.use('/', require('./routes/analyze'))
-app.use('/', require('./routes/results'))
-
 
 app.listen(process.env.PORT || 3000)
 

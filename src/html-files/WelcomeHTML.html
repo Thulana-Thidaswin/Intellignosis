@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intellignosis</title>
+	
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../css-files/WelcomeCSS.css"/>
+    <script src="../js-files/WelcomeJS.js"></script>
+    <script src="https://kit.fontawesome.com/9dd2a3851f.js" crossorigin="anonymous"></script>
+
+    <style>
+
+      @keyframes cursor-blink {
+        0% {
+          opacity: 0;
+        }
+      }
+
+      
+
+      .headTitle {
+        color: #203454;
+        font-size: 30px;
+      }
+
+      .statusDiv {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: "Lucida Console";
+        margin: 0px 300px 0px 300px;
+        padding: 1px 1px 1px 1px;
+        border-radius: 3px;
+        font-size: 16px;
+        
+      }
+      .statusDiv h6::after {
+        content: "";
+        width: 10px;
+        height: 1px;
+        background: #ffffff;
+        display: inline-block;
+        animation: cursor-blink 1.5s steps(2) infinite;
+      }
+
+      .btn {
+        font-size: x-large;
+        background-color: #203454;
+        color: white;
+        font-size: 20px;
+        width: 20%;
+        border-radius: 20px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .btn:hover, .btn:hover{
+        background-color: white;
+        color: black;
+      }
+
+
+      .btn:active, .btn:active{
+        background-color: gray;
+        color: black;
+      } 
+
+    </style>
+    
+  </head>
+  <body>
+    <div>
+      <br>
+        <p class="Welcome">Welcome to</p>
+
+        <div class="headTitle">
+          <h1>INTELLIGNOSIS</h1>
+        </div>
+        
+        <div class="statusDiv">
+          <h6 id="status"></h6>
+        </div>       
+        
+        <br>
+        <div id="maiden">
+            <p>Save your progress?</p>
+            <button class="btn" onclick="window.location.href='https://intellignosis.herokuapp.com/'" >Sign in</button>
+        </div>
+        <div id="maidenless">
+            <p>No maidens?</p>
+            <button class="btn" onclick="window.location.href='../html-files/DashboardScreenHTML.html'">Continue as Guest</button>
+        </div>
+
+
+        <script>
+    
+        </script>
+    </div>
+  </body>
+</html>

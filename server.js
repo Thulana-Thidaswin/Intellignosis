@@ -15,7 +15,6 @@ const passport = require('passport');
 const path = require('path');
 const upload = require('express-fileupload');
 
-
 require('events').EventEmitter.prototype._maxListeners = 100;
 
 //Importing the passport and database configuration
@@ -71,7 +70,6 @@ mongoose.connect(ldb, { useNewURLParser: true })
     .then(() => console.log("MongoDB Connected..."))
     .catch(err => console.error(err))
 
-// DONT REMOVE THIS BALLO
 //Used to connect heroku to Mongo
 // mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true})
 // const db = mongoose.connection

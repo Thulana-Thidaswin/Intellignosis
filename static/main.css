@@ -1,0 +1,91 @@
+.Title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 50px;
+    color: black;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto;
+    max-width: 38rem;
+    background-color: #c4c4c4;
+    text-align: center;
+  }
+  
+  .sidePanel{
+    width: 20%;
+    float: left;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    height: 100%;
+    background: url(../src/main-images/grey-g9dec26a6e_1280.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .logout-btn{
+    width: 100%;
+
+  }
+  
+  .spbtn{
+    width: 100%;
+    background-color: #d1d1d1;
+    height: 50px;
+    font-size: large;
+    transition-duration: 0.1s;
+    border: none;
+    text-align: left;
+  }
+  
+  .spbtnpanel{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+  }
+  
+  .spbtn:hover{
+    background-color: #85858C;
+  }
+  
+  .spbtn:active{
+    background-color: #616D7E;
+    border-right: 7px solid black;
+  }
+  
+  .AboutText{
+    position: relative;
+    top: 70%;
+  }
+  
+  .mainPanel{
+    position: absolute;
+    right: 0px;
+    float: right;
+    width: 80%;
+    height: 100%;
+    background: url(../src/main-images/whiteBG.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    border-left: 2px solid #52595D;
+  }
+  
+  
+  #gobacklink{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 15px;
+    top: 15px;   
+  }
+  
+
+  

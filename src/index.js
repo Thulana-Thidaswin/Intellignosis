@@ -16,6 +16,7 @@ const createWindow = () => {
     icon: "main-images/ciruclarcroppedlogo_1WL_icon.ico"
   });
   mainWindow.maximize();
+  mainWindow.webContents.openDevTools()
 
   const template = [
     // { role: 'fileMenu' }
@@ -99,11 +100,6 @@ const createWindow = () => {
 
   mainWindow.loadFile(path.join(__dirname, 'html-files/LoadingHTML.html'));
 
-
-
-
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished

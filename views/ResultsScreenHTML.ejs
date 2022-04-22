@@ -274,14 +274,17 @@ function printPageArea(resultsSheetId){
     WinPrint.print();
     WinPrint.close();
 }
-function changeDate() {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    today = dd + '/' + mm + '/' + yyyy;
-    document.getElementById("details").innerHTML = "Date : " + today;
-  }
+window.onload = function(){
+    changeDate();
+    function changeDate() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = dd + '/' + mm + '/' + yyyy;
+        document.getElementById("details").innerHTML = "Date : " + today;
+    }
+}    
 </script>
 
 </html>

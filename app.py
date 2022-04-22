@@ -53,7 +53,6 @@ def index():
     psd1 = psd1.reshape(513)
 
     # Absolute power, using different bands
-    #Changed Gamma to THEta here!
     bp = yasa.bandpower_from_psd(psd1, freqs1, ch_names=chanC4, bands=[(13,22,'Beta'),(22, 40, 'Gamma')], relative=False)
 
     # Create a Numpy Array of integers
@@ -76,44 +75,25 @@ def index():
         with pd.ExcelWriter(path = file_name, engine = 'openpyxl') as writer:
             bp.to_excel(writer, index = False, sheet_name = 'Sheet1')
 
-    #DONT FORGET TO UNCOMMENT THIS!!!!!!!!!!!111
     os.remove(latest_file)
 
     df = pd.read_excel("Tabulars/Absolute-bands.xlsx")
-    # betaFreqs = df["Beta"].tolist()
-    # gammaFreqs = df["Gamma"].tolist()
-    # allFreqs = betaFreqs + gammaFreqs
+
 
     x_data = df[["Beta", "Gamma"]]
     print("XDATA: ", x_data)
 
-
-    # convertedArr = np.reshape(betaFreqs, (-1, 1))
-    # print(convertedArr)
     model = pickle.load(open("kNNModel.pk1", "rb"))
     prediction = model.predict(x_data)
 
-    # os.remove("Tabulars/Absolute-bands.xlsx")
+    os.remove("Tabulars/Absolute-bands.xlsx")
 
     print(prediction)
 
     predAsString = np.array_str(prediction)
-    # predAsString=predAsString.strip("'")
-    # print(predAsString)
-    # predAsString = re.sub("[]","", predAsString)
-    # print("Array as String: ", predAsString)
-    # myStr = "HEyyyy"
-    # print(predAsString+myStr)
 
-    # file = open("static/newoutput.txt", "w")
-    # # prediction = repr(predAsString)
-    # file.write(predAsString)
-    # print(predAsString)
-    # file.close
-    # return render_template("resultshtml.html", prediction=predAsString)
     print(predAsString)
-    # randVar = "['Minimal']" 
-    # print(randVar)
+
     return predAsString
 
 if __name__ == "__main__":

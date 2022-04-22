@@ -226,11 +226,6 @@ const symptomArray = ["The patient might show slight symptoms of moodiness or sl
     "The patient might show symptoms of sudden mood changes as well as insomnia.",
     "The patient might show suicidal behaviour as well as sudden mood changes and delusions."];
 
-// const minimal = "[&#39;Minimal&#39;]";
-// const mild = "[&#39;Mild&#39;]";
-// const moderate = "[&#39;Moderate&#39;]";
-// const severe = "[&#39;Severe&#39;]";
-
 const minimal = "0";
 const mild = "1";
 const moderate = "2";
@@ -256,6 +251,12 @@ window.onload = function(){
             document.getElementById("seekTherapy").innerHTML = suggestArray[3];
             document.getElementById("symptoms").innerHTML = symptomArray[3];
         }
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = dd + '/' + mm + '/' + yyyy;
+        document.getElementById("details").innerHTML = "Date : " + today;    
     }
 }
 
@@ -267,18 +268,7 @@ function printPageArea(resultsSheetId){
     WinPrint.focus();
     WinPrint.print();
     WinPrint.close();
-}
-window.onload = function(){
-    changeDate();
-    function changeDate() {
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = today.getFullYear();
-        today = dd + '/' + mm + '/' + yyyy;
-        document.getElementById("details").innerHTML = "Date : " + today;
-    }
-}    
+}   
 </script>
 
 </html>

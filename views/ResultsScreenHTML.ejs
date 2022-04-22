@@ -206,17 +206,11 @@
             }
         </script>
     </div>
-    <!-- <script type="text/javascript" src="{{ url_for('static', filename='results.js') }}"></script> -->
 </body>
 <script>
-    // let data = getParameterByName('data')
-    // console.log('DATA FROM FLASK: ' + data) 
     let params = (new URL(document.location)).searchParams;
     let data = params.get("data");
     console.log('DATA FROM FLASK: ' + data)
-//USE this 'data' anywhere you want
-// changeName();
-// const pred_output = "{{prediction}}";
 const resultArray = ["The patient is suffering from <b>Minimal</b> Depression.",
     "The patient is suffering from <b>Mild</b> Depression.",
     "The patient is suffering from <b>Moderate</b> Depression.",

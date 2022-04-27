@@ -19,7 +19,7 @@ app = Flask(__name__)
 @app.route("/flask/", methods=['GET'])
 def index():
     # Scientific packages
-    list_of_files = glob.glob('Upload/*.edf')
+    list_of_files = glob.glob('*.edf')
     # print(list_of_files)
     latest_file = max(list_of_files, key=os.path.getctime)
 
@@ -59,7 +59,7 @@ def index():
     arr = np.array([])
     test = bp.bands_[2]
 
-    file_name = "Tabulars/Absolute-bands.xlsx"
+    file_name = "Absolute-bands.xlsx"
 
     # create excel file
     if os.path.isfile(file_name):  # if file already exists append to existing file
@@ -77,7 +77,7 @@ def index():
 
     os.remove(latest_file)
 
-    df = pd.read_excel("Tabulars/Absolute-bands.xlsx")
+    df = pd.read_excel("Absolute-bands.xlsx")
 
 
     x_data = df[["Beta", "Gamma"]]
@@ -86,7 +86,7 @@ def index():
     model = pickle.load(open("kNNModel.pk1", "rb"))
     prediction = model.predict(x_data)
 
-    os.remove("Tabulars/Absolute-bands.xlsx")
+    os.remove("Absolute-bands.xlsx")
 
     print(prediction)
 

@@ -37,7 +37,7 @@ router.post('/analyze', (req, res)=>{
     const filename = file.name;
     console.log(filename)
 
-    file.mv('./Upload/' + filename);
+    file.mv('./' + filename);
     }
   axios({
     method: 'get',

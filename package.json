@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "devStart": "nodemon server.js",
-    "electronStart": "electron ."
+    "electronStart": "electron .",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Thulana Thidaswin",

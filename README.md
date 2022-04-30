@@ -22,7 +22,7 @@ Team members:
 An installer will be implemented where it will contain a setup where within a few clicks of a button the application could be installed.(Github releases)
 1. [NodeJS](https://nodejs.org/). We prefer sticking to the latest version.
 2. [Python](https://www.python.org/downloads/). Again, we prefer the latest version.
-3. [PIP](https://pypi.org/project/pip/)Needed to download a bunch of dependancies for python
+3. [PIP](https://pypi.org/project/pip/) Needed to download a bunch of dependancies for python
 4. [Electron](https://www.electronjs.org/) Used for the application
 
 After all the depeendencies are installed open two command prompts for the two servers and run
@@ -37,6 +37,6 @@ After these steps open Local host 3000 OR open the intellignosis application
    
 OR
 
-Use our website (https://intellignosis.herokuapp.com/)(NOT ACESSIBLE AS THE HOSTING SITE IS DOWN)                                                                        
+Use our website (https://intellignosis.herokuapp.com/) (NOT ACESSIBLE AS THE HOSTING SITE IS DOWN)                                                                        
 
 

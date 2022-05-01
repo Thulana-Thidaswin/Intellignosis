@@ -27,11 +27,15 @@ An installer will be implemented where it will contain a setup where within a fe
 
 After all the depeendencies are installed open two command prompts for the two servers and run
 
-`npm run flask`
+`Flask run`
 
 and in the other one
 
 `npm run devStart`
+
+and then
+
+`npm run electronStart`
 
 After these steps open Local host 3000 OR open the intellignosis application 
    

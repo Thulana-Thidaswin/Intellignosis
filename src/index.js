@@ -16,7 +16,8 @@ const createWindow = () => {
     icon: "main-images/ciruclarcroppedlogo_1WL_icon.ico"
   });
   mainWindow.maximize();
-  mainWindow.webContents.openDevTools()
+  // function to open developer tools
+  // mainWindow.webContents.openDevTools()
 
   const template = [
     // { role: 'fileMenu' }

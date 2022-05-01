@@ -20,17 +20,17 @@ df["LEVEL"] = df["LEVEL"].map({"Minimal" :0, "Mild" :1, "Moderate" :2, "Severe" 
 print(df["LEVEL"])
 
 # #printing 1st plot
-# plt.close();
-# sns.set_style("whitegrid");
-# sns.pairplot(df, hue="LEVEL", height=3);
-# # plt.show()
+plt.close();
+sns.set_style("whitegrid");
+sns.pairplot(df, hue="LEVEL", height=3);
+plt.show()
 
 #printing 2nd plot
-# sns.set_style("whitegrid");
-# sns.FacetGrid(df, hue="LEVEL", size=5) \
-# .map(plt.scatter, "Beta", "Gamma") \
-# .add_legend();
-# plt.show()
+sns.set_style("whitegrid");
+sns.FacetGrid(df, hue="LEVEL", size=5) \
+.map(plt.scatter, "Beta", "Gamma") \
+.add_legend();
+plt.show()
 
 
 #Printing the data in the specific bands
@@ -47,25 +47,25 @@ X_data_minmax = MinMaxScaler.fit_transform(x_data)
 data = pd.DataFrame(X_data_minmax,columns=['Beta', 'Gamma'])
 
 # 3rd plot
-# sns.set_style("whitegrid");
-# sns.FacetGrid(df, hue="LEVEL", height=5) \
-# .map(plt.scatter, "Beta", "Gamma") \
-# .add_legend();
-# plt.show()
+sns.set_style("whitegrid");
+sns.FacetGrid(df, hue="LEVEL", height=5) \
+.map(plt.scatter, "Beta", "Gamma") \
+.add_legend();
+plt.show()
 
 print("HEYYYY")
 #Splitting dataset into training and testing data
 X_train, X_test, y_train, y_test = train_test_split(x_data, y_data,test_size=0.15, random_state = 1)
-print("HEYYYY2222222222222")
+
 #TRAINING with knn = 5
 knn_clf=KNeighborsClassifier(n_neighbors=5, weights="uniform", algorithm="auto", leaf_size=30, p=2, metric="minkowski", metric_params=None, n_jobs=None)
 knn_clf.fit(X_train,y_train)
-print("HEYYYY33333333333333333")
+
 
 #Using pickle.dump to save and load the model
-# pickle.dump(knn_clf, open("kNNModel.pk1", "wb"))
-# model = pickle.load(open("kNNModel.pk1", "rb"))
-# ypred=model.predict(X_test)
+pickle.dump(knn_clf, open("kNNModel.pk1", "wb"))
+model = pickle.load(open("kNNModel.pk1", "rb"))
+ypred=model.predict(X_test)
 
 #PREDICTING 
 ypred=knn_clf.predict(X_test)

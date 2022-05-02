@@ -1,13 +1,32 @@
 {
   "name": "intellignosis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An application to detect depression though EEG Waves",
   "main": "src/index.js",
   "scripts": {
     "start": "node server.js",
     "devStart": "nodemon server.js",
     "electronStart": "electron .",
-    "test": "jest"
+    "test": "jest",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "Intellignosis",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "/main-images/ciruclarcroppedlogo_1WL_icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "/main-images/ciruclarcroppedlogo_1WL_icon.ico",
+      "uninstallerIcon": "/main-images/ciruclarcroppedlogo_1WL_icon.ico",
+      "uninstallDisplayName": "Intellignosis Uninstaller",
+      "license": "LICENSE .txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": "Thulana Thidaswin",
@@ -34,7 +53,8 @@
   "devDependencies": {
     "dotenv": "^16.0.0",
     "electron": "^18.1.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "electron-builder": "^23.0.3"
   },
   "repository": {
     "type": "git",

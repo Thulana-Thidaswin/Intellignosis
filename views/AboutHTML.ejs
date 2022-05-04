@@ -2,172 +2,111 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8" />
-	<title>Intellignosis</title>
-	<link rel="icon" href="../main-images/ciruclarcroppedlogo_1WL_icon.ico">
-	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<%- include('partials/head'); %>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 		body {
 			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-			margin: auto;
-			max-width: 38rem;
+			
 			background-color: #fffafa;
 			text-align: center;
-			max-width: 100%;
+			
 		}
-
-
-		body {
-			margin: 0;
-		}
-
 
 		.title {
 			font-size: 30px;
 			text-align: center;
-			padding-bottom: 10px;
+			padding-bottom: 5px;
+			position: relative;
+			top: 30px;
 		}
 
-		.examsTitle {
-			font-size: 22px;
-			text-align: center;
-			padding: 15px 0;
-		}
 
 		.image_details {
 
 			position: relative;
 			width: 20%;
-			float: right;
+			float: left;
 		}
 
 		.image1_details {
-
-			display: block;
-			height: 270px;
-			width: 250px;
-
-
+			-webkit-filter: grayscale(75%); 
+  			filter: grayscale(50%);
 		}
 
-		.image_overlay_details {
-			bottom: 0;
-			padding: 20px;
-			background: rgba(0, 0, 0, 0.7);
-			color: white;
-			top: 0;
-			left: 0;
-			width: 85%;
-			height: 85%;
-			position: absolute;
-			opacity: 0;
-			transition: opacity 0.5s;
-			text-align: center;
-
-		}
-
-		.image_overlay_details:hover {
-
-			opacity: 0.5;
-		}
-
-		.title_details {
-
-			font-size: 1.3em;
-			font-weight: bold;
-			position: middle;
-			margin: 20%;
-		}
 
 		.container {
 			color: black;
 		}
 
-		.centered {
-			position: absolute;
-			top: 30%;
-			left: 62.5%;
-			font-size: 15px;
-			transform: translate(-50%, -50%);
+		#saad-image{
+			position: relative;
+			right: 55px;
 		}
+
+		#saad-name{
+			position: relative;
+			left: 50px;
+		}
+
+
 	</style>
 </head>
 
 <body>
 	<div class="sidePanel">
-		<!-- Don't make any changes to this panel  -->
-		<img src="/main-images/logocropped.png" width="80%" style="margin: 20px 0px 20px 0px;">
-		<div class="spbtnpanel">
-			<button type="button" class="spbtn" onclick="window.location.href='/dashboard'"><i
-					class='bx bxs-home'></i></i>&nbsp;&nbsp;Dashboard</button><br>
-			<button type="button" class="spbtn" onclick="window.location.href='/AnalyzeScreenHTML'"><i
-					class='bx bx-glasses'></i>&nbsp;&nbsp;Analyze</button><br>
-			<button type="button" class="spbtn" onclick="window.location.href='/SettingsScreenHTML'"><i
-					class='bx bx-cog'></i>&nbsp;&nbsp;Settings</button><br>
-			<button type="button" class="spbtn" onclick="window.location.href= '/users/logout'"><i
-					class='bx bx-log-out'></i></i>&nbsp;&nbsp;Logout</button>
-		</div>
-		<span class="AboutText">
-			<p>Intellignosis® version 1.0.0<br>
-				Trademark of Intellignosis<br> CAD, Sri Lanka</p>
-		</span>
+		<%- include('partials/sidePanel'); %>
 	</div>
 	<div class="mainPanel">
 		<a href="javascript:history.back()" id="gobacklink" class='bx bx-log-out-circle'></i></i>&nbsp;&nbsp;Go
 			back</a>
 
-		<h1 class="title"><strong>ABOUT US</strong></h1>
+		<h1 class="title"><strong>Development Team</strong></h1>
 
 		<br>
 		<div>
 			<br>
 			<hr>
 			<div class="image_details">
-				<img class="image1_details" src="/main-images/arif.png" alt="A picture of a student">
-				<div class="image_overlay_details">
-					<div class="title_details">Arif Zahir</div>
+				<img class="image1_details" src="/main-images/Arif.png" height="300px" width="300px" alt="A picture of a student">
+				<b style="font-size:x-large;">Arif Zahir<b><br>
+				<a href="https://github.com/ArifZahir"class="fa fa-github" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+				<a href="https://github.com/ArifZahir"class="fa fa-instagram" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+				<a href="https://github.com/ArifZahir"class="fa fa-linkedin-square" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
 
-				</div>
+
 			</div>
 
 			<div class="image_details">
-				<img class="image1_details" src="/main-images/thu.jpeg" alt="A picture of a student">
-				<div class="image_overlay_details">
-					<div class="title_details">Thulana Thidaswin</div>
-
-				</div>
+				<img class="image1_details" src="/main-images/thu.png" height="300px" width="250px" alt="A picture of a student">
+				<b style="font-size:x-large;">Thulana Thidaswin<b><br>
+					<a href="https://github.com/ArifZahir"class="fa fa-github" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-instagram" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-linkedin-square" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
 			</div>
 
 			<div class="image_details">
-				<img class="image1_details" src="/main-images/sad.jpeg" alt="A picture of a stu">
-				<div class="image_overlay_details">
-					<div class="title_details">Saad Mohideen</div>
-
-					
-				</div>
+				<img class="image1_details" src="/main-images/final.png" height="300px" width="220px" alt="A picture of a stu">
+				<b style="font-size:x-large;">Sandali Sirwardena<b><br>
+					<a href="https://github.com/ArifZahir"class="fa fa-github" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-instagram" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-linkedin-square" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
 			</div>
 
 			<div class="image_details">
-				<img class="image1_details" src="/main-images/hare.jpeg" alt="A picture of a student">
-				<div class="image_overlay_details">
-					<div class="title_details">Harees Srinivasan</div>
-
-				</div>
+				<img class="image1_details" src="/main-images/hare.png" height="300px" width="230px" alt="A picture of a student">
+				<b style="font-size:x-large;">Harees Srini<b><br>
+					<a href="https://github.com/ArifZahir"class="fa fa-github" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-instagram" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-linkedin-square" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
 			</div>
 
-			<div class="image_details">
-				<img class="image1_details" src="../main-images/final.jpeg" alt="A picture of a student">
-				<div class="image_overlay_details">
-					<div class="title_details">Sandali Siriwardana</div>
-
-				</div>
-			</div>
-            
-			<div class="container">
-				
-				<p> We are group of five and we created this application to help people out there who are struggling
-					with this depression.</p>
+			<div class="image_details" id="saad-image">
+				<img class="image1_details" src="../main-images/sad.png" height="300px" width="300px" alt="A picture of a student">
+				<b id="saad-name" style="font-size:x-large;">Saad Mohideen<b><br>
+					<a href="https://github.com/ArifZahir"class="fa fa-github" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-instagram" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
+					<a href="https://github.com/ArifZahir"class="fa fa-linkedin-square" style="font-size:24px; text-decoration: none; color: black;"></a>&nbsp;
 			</div>
 
 		</div>
@@ -175,24 +114,7 @@
 	</div>
 
 	</div>
-	<script>
-		window.addEventListener('mouseover', initLandbot, { once: true });
-		window.addEventListener('touchstart', initLandbot, { once: true });
-		var myLandbot;
-		function initLandbot() {
-			if (!myLandbot) {
-				var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-				s.addEventListener('load', function () {
-					var myLandbot = new Landbot.Livechat({
-						configUrl: 'https://chats.landbot.io/v3/H-1200643-M0AAYKE58KG20BN6/index.json',
-					});
-				});
-				s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-				var x = document.getElementsByTagName('script')[0];
-				x.parentNode.insertBefore(s, x);
-			}
-		}
-	</script>
+	<%- include('partials/chatbot'); %>
 	</div>
 </body>
 
